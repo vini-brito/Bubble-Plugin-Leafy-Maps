@@ -1,0 +1,14 @@
+{
+    "caption": "Remove element from",
+    "doc": "",
+    "fields": {
+        "ACe": {
+            "caption": "Target element",
+            "doc": "The unique name of the element that you want to remove from the map. Can be a marker, polyline (route) and polygon.",
+            "editor": "DynamicValue",
+            "name": "target_element",
+            "rank": 0,
+            "value": "text"
+        }
+    }
+}

@@ -1,0 +1,181 @@
+{
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 300,
+        "width": 400
+    },
+    "display": "Leafy map",
+    "events": {
+        "ACo": {
+            "caption": "Location found",
+            "name": "location_found"
+        },
+        "ADD": {
+            "caption": "Location error",
+            "name": "location_error"
+        },
+        "ADQ": {
+            "caption": "Marker clicked",
+            "name": "marker_clicked"
+        }
+    },
+    "icon": "ion-android-map",
+    "property_applications": {
+        "Border": true,
+        "BoxShadow": true,
+        "MinWidth": true,
+        "resizable": true
+    },
+    "states": {
+        "ACP": {
+            "caption": "Stadia route request body",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "stadia_route_request_body",
+            "value": "text"
+        },
+        "ACf": {
+            "caption": "Is the point contained in the rectangle?",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "point_is_contained",
+            "value": "boolean"
+        },
+        "ACr": {
+            "caption": "User's latitude",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "user_latitude",
+            "value": "number"
+        },
+        "ACs": {
+            "caption": "User's longitude",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "user_longitude",
+            "value": "number"
+        },
+        "ACt": {
+            "caption": "Boundary Northeast Lat",
+            "doc": "Geographical bounds of the area user is located in (with respect to the accuracy of location).",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "user_bounds_northeast_latitude",
+            "value": "number"
+        },
+        "ACu": {
+            "caption": "Boundary Northeast Lng",
+            "doc": "Geographical bounds of the area user is located in (with respect to the accuracy of location).",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "user_bounds_northeast_longitude",
+            "value": "number"
+        },
+        "ACv": {
+            "caption": "Boundary Southwest Lat",
+            "doc": "Geographical bounds of the area user is located in (with respect to the accuracy of location).",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "user_bounds_southwest_latitude",
+            "value": "number"
+        },
+        "ACw": {
+            "caption": "Boundary Southwest Lng",
+            "doc": "Geographical bounds of the area user is located in (with respect to the accuracy of location).",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "user_bounds_southwest_longitude",
+            "value": "number"
+        },
+        "ACx": {
+            "caption": "Accuracy",
+            "doc": "Accuracy of location in meters.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "accuracy",
+            "value": "number"
+        },
+        "ACy": {
+            "caption": "Altitude",
+            "doc": "Height of the position above the WGS84 ellipsoid in meters.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "altitude",
+            "value": "number"
+        },
+        "ACz": {
+            "caption": "Altitude accuracy",
+            "doc": "Accuracy of altitude in meters.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "altitude_accuracy",
+            "value": "number"
+        },
+        "ADA": {
+            "caption": "Heading",
+            "doc": "The direction of travel in degrees counting clockwise from true North.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "heading",
+            "value": "number"
+        },
+        "ADB": {
+            "caption": "Speed",
+            "doc": "Current velocity in meters per second.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "speed",
+            "value": "number"
+        },
+        "ADC": {
+            "caption": "Timestamp",
+            "doc": "The time when the position was acquired. In UNIX format.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "timestamp",
+            "value": "number"
+        },
+        "ADJ": {
+            "caption": "Center's Latitude",
+            "doc": "The map center latitude",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "map_center_latitude",
+            "value": "number"
+        },
+        "ADK": {
+            "caption": "Center's Longitude",
+            "doc": "The map center longitude",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "map_center_longitude",
+            "value": "number"
+        },
+        "ADL": {
+            "caption": "Marker Clicked ID",
+            "doc": "Current clicked marker ID (unique name)",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "marker_clicked_id",
+            "value": "text"
+        }
+    }
+}

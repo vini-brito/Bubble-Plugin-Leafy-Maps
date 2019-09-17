@@ -1,0 +1,32 @@
+{
+    "caption": "Create Stadia route request",
+    "fields": {
+        "ACK": {
+            "caption": "List of latitudes",
+            "doc": "Coordinate has to have six digits of precision, for example 55.123456.",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "list_of_latitudes",
+            "optional": false,
+            "rank": 0,
+            "value": "number"
+        },
+        "ACL": {
+            "caption": "List of longitudes",
+            "doc": "Coordinate has to have six digits of precision, for example 55.123456.",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "list_of_longitudes",
+            "rank": 1,
+            "value": "number"
+        },
+        "ACN": {
+            "caption": "Costing model",
+            "default_val": "auto",
+            "editor": "Dropdown",
+            "name": "costing_model",
+            "options": "auto,pedestrian,bicycle",
+            "rank": 2
+        }
+    }
+}

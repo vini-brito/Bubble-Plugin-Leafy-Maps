@@ -1,0 +1,27 @@
+{
+    "caption": "Pan to in",
+    "fields": {
+        "ABU": {
+            "caption": "Latitude",
+            "doc": "A number, for example -0,09",
+            "editor": "DynamicValue",
+            "name": "latitude",
+            "rank": 1,
+            "value": "number"
+        },
+        "ABV": {
+            "caption": "Longitude",
+            "doc": "A number, for example 50.120",
+            "editor": "DynamicValue",
+            "name": "longitude",
+            "rank": 2,
+            "value": "number"
+        },
+        "ABW": {
+            "caption": "Pans the view to a specific point.",
+            "editor": "Label",
+            "name": "pans_the_view_to_a_specific_point.",
+            "rank": 0
+        }
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "caption": "Display weather overlay on",
+    "fields": {
+        "ACT": {
+            "caption": "First show the map with any other map tile. This action will overlay the current map tile with a weather tile.",
+            "editor": "Label",
+            "name": "you_first_has_to_show_the_map_with_any_other_map_tile_that_you_want._then_you_add_this_action,_it_will_overlay_the_current_map_tile_with_a_weather_tile_from_open_weather.",
+            "rank": 1
+        },
+        "ACV": {
+            "caption": "Openweather tile",
+            "doc": " Also, if you choose one option in one dropdown, the other dropdown must be empty (since you're not using it).",
+            "editor": "Dropdown",
+            "name": "openweathermap_tile",
+            "optional": true,
+            "options": "Convective precipitation (mm),Precipitation intensity (mm/s),Accumulated precipitation (mm),Accumulated precipitation - rain (mm),Accumulated precipitation - snow (m),Depth of snow (m),Wind speed at an altitude of 10 meters (m/s),Joint display of speed wind (color) and wind direction (arrows) received by U and V components (m/s),Atmospheric pressure on mean sea level (hPa),Air temperature at a height of 2 meters (°C),Temperature of a dew point (°C),Soil temperature 0-10 сm (K),Soil temperature >10 сm (K),Relative humidity (%),Cloudiness (%)",
+            "rank": 2
+        },
+        "ACX": {
+            "caption": "Requested date",
+            "doc": "Use extract:unix format. See plugin documentation to know what are the possibilities for each tile overlay. Some allow forecasting, others only allow current and historical data.",
+            "editor": "DynamicValue",
+            "name": "requested_date",
+            "optional": true,
+            "rank": 3,
+            "value": "number"
+        },
+        "ACY": {
+            "caption": "Below are free tier tiles, possibly rate limited in case of heavy usage. These aren't capable of grabbing historical or forecast data.",
+            "editor": "Label",
+            "name": "free_tier_tiles",
+            "rank": 4
+        },
+        "ACa": {
+            "caption": "Openweather tile",
+            "doc": " Also, if you choose one option in one dropdown, the other dropdown must be empty (since you're not using it).",
+            "editor": "Dropdown",
+            "name": "openweather_tile",
+            "optional": true,
+            "options": "Clouds,Precipitation,Sea level pressure,Wind speed,Temperature",
+            "rank": 5
+        },
+        "ADF": {
+            "caption": "Unique name",
+            "doc": "A unique name to this overlay so you can remove it without removing the entire map and reloading it.",
+            "editor": "DynamicValue",
+            "name": "unique_name_for_this_overlay",
+            "rank": 0,
+            "value": "text"
+        },
+        "ADG": {
+            "caption": "Optional.",
+            "editor": "Label",
+            "name": "optional._below_you_can_provide_a_text_that_is_an_exact_match_to_one_of_the_overlay_options,_including_case_sensitive,_as_an_alternate_interface_to_the_dropdowns_above.",
+            "rank": 6
+        },
+        "ADH": {
+            "caption": "Overlay name",
+            "doc": "You can provide a text that is an exact match to one of the overlay dropdown options, case sensitive, as an alternate interface to the dropdowns above. If empty, one of the dropdowns will be considered.",
+            "editor": "DynamicValue",
+            "name": "overlay_name",
+            "rank": 7,
+            "value": "text"
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "caption": "Track user on",
+    "fields": {
+        "ACm": {
+            "caption": "Continuously track?",
+            "doc": "If checked, will repeatedly track the user, allowing you to watch their movements. Useful for navigation, alerting if user is entering some area, create movement record and more. Testing in a PC browser this ran once every 5 seconds, so any events you tie to this may fire that often.",
+            "editor": "DynamicValue",
+            "name": "watch",
+            "rank": 1,
+            "value": "boolean"
+        },
+        "ACn": {
+            "caption": "Center view?",
+            "doc": "If checked, automatically sets the map view to the user location with respect to detection accuracy, or to world view if geolocation failed.",
+            "editor": "DynamicValue",
+            "name": "view",
+            "rank": 2,
+            "value": "boolean"
+        },
+        "ACp": {
+            "caption": "High accuracy?",
+            "doc": "Indicates the application would like to receive the best possible results. If checked and if the device is able to provide a more accurate position, it will do so. Note that this can result in slower response times or increased power consumption (with a GPS chip on a mobile device for example). On the other hand, if false (the default value), the device can take the liberty to save resources by responding more quickly and/or using less power.",
+            "editor": "DynamicValue",
+            "name": "high_accuracy",
+            "rank": 3,
+            "value": "boolean"
+        },
+        "ACq": {
+            "caption": "Data collected from tracking will be available on their respective map element (Leafy Map X) states.",
+            "editor": "Label",
+            "name": "data_collected_from_tracking_will_be_available_on_their_respective_map_element_(leafy_map_x)_states.",
+            "rank": 0
+        }
+    }
+}

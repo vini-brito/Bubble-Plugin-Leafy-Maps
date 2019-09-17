@@ -1,0 +1,76 @@
+{
+    "caption": "Add marker on",
+    "fields": {
+        "AAL": {
+            "caption": "Latitude",
+            "editor": "DynamicValue",
+            "name": "latitude",
+            "rank": 0,
+            "value": "number"
+        },
+        "AAM": {
+            "caption": "Longitude",
+            "editor": "DynamicValue",
+            "name": "longitude",
+            "rank": 1,
+            "value": "number"
+        },
+        "AAe": {
+            "caption": "Popup text",
+            "doc": "Text to be displayed in this marker's popup.",
+            "editor": "DynamicValue",
+            "name": "popup_text",
+            "optional": true,
+            "rank": 3,
+            "value": "text"
+        },
+        "AAg": {
+            "caption": "Use custom icon?",
+            "default_val": false,
+            "doc": "Allows you to upload your own .png image to be used as an icon or marker instead of the default marker. You can optionally upload a .png image to be the icon shadow if you want to, but it's not necessary.",
+            "editor": "Checkbox",
+            "name": "use_custom_icon",
+            "rank": 5
+        },
+        "AAh": {
+            "caption": "Custom icon",
+            "editor": "DynamicValue",
+            "name": "custom_icon_url",
+            "optional": true,
+            "rank": 6,
+            "value": "image"
+        },
+        "AAi": {
+            "caption": "Custom icon shadow",
+            "editor": "DynamicValue",
+            "name": "custom_icon_shadow_url",
+            "optional": true,
+            "rank": 7,
+            "value": "image"
+        },
+        "ABK": {
+            "caption": "Marker style",
+            "default_val": "Blue",
+            "editor": "Dropdown",
+            "name": "marker_style",
+            "options": "Blue,Yellow,Green,Red,Brown,White,Black",
+            "rank": 4
+        },
+        "ABN": {
+            "caption": "Show popup on click?",
+            "default_val": false,
+            "doc": "Check this box so whenever the user clicks this marker, it will show a popup right above it. Useful for explanations and references.",
+            "editor": "Checkbox",
+            "name": "popup_on_click",
+            "rank": 2
+        },
+        "ACb": {
+            "caption": "Unique name",
+            "doc": "A unique name to this marker, so you can perform actions on it later on by refering to its name. Also, when it's clicked you'll see its name on the map element field called Marker Clicked ID. If you leave this blank then no action will be performed on it when clicked.",
+            "editor": "DynamicValue",
+            "name": "marker_name",
+            "rank": 8,
+            "value": "text"
+        }
+    }
+}

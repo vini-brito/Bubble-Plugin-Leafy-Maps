@@ -1,0 +1,13 @@
+{
+    "caption": "Set zoom on",
+    "fields": {
+        "ABS": {
+            "caption": "Desired zoom level",
+            "doc": "From 1 to 20, with 20 being as close as possible to the ground.",
+            "editor": "DynamicValue",
+            "name": "new_zoom",
+            "rank": 0,
+            "value": "number"
+        }
+    }
+}

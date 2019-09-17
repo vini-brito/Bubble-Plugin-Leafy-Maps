@@ -1,0 +1,101 @@
+{
+    "caption": "Draw line on",
+    "fields": {
+        "AAw": {
+            "caption": "List of latitudes",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "list_of_latitudes",
+            "optional": true,
+            "rank": 1,
+            "value": "number"
+        },
+        "AAx": {
+            "caption": "List of longitudes",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "list_of_longitudes",
+            "optional": true,
+            "rank": 2,
+            "value": "number"
+        },
+        "AAy": {
+            "caption": "Line color",
+            "default_val": "rgba(235, 153, 0, 1)",
+            "editor": "Color",
+            "name": "stroke_color",
+            "rank": 6
+        },
+        "AAz": {
+            "caption": "Zoom map to this line?",
+            "default_val": false,
+            "doc": "Will zoom the map on this line upon this line's creation.",
+            "editor": "Checkbox",
+            "name": "zoom_map_to_this_line",
+            "rank": 3
+        },
+        "ABA": {
+            "caption": "Unique line name",
+            "doc": "Write a unique name to this line so you can refer to it later on, for example to focus user's view on this line on a click of a button or some other event or action that you may want.",
+            "editor": "DynamicValue",
+            "name": "polyline_name",
+            "rank": 0,
+            "value": "text"
+        },
+        "ABv": {
+            "caption": "Use encoded shape?",
+            "default_val": false,
+            "doc": "",
+            "editor": "Checkbox",
+            "name": "use_encoded_shape_polyline",
+            "optional": true,
+            "rank": 4,
+            "value": "text"
+        },
+        "ABw": {
+            "caption": "Encoded shape",
+            "doc": "Input here the \"Shape\" text result from a route API call.",
+            "editor": "DynamicValue",
+            "name": "encoded_shape",
+            "optional": true,
+            "rank": 5,
+            "value": "text"
+        },
+        "ABx": {
+            "caption": "Weight",
+            "default_val": 3,
+            "doc": "Stroke width in pixels, default is 3.",
+            "editor": "DynamicValue",
+            "name": "stroke_weight",
+            "rank": 7,
+            "value": "number"
+        },
+        "ABy": {
+            "caption": "Opacity",
+            "default_val": 1,
+            "doc": "From 0 to 1, use decimals, for example 0.5 for 50% opacity.",
+            "editor": "DynamicValue",
+            "name": "stroke_opacity",
+            "rank": 8,
+            "value": "number"
+        },
+        "ABz": {
+            "caption": "Line cap",
+            "default_val": "round",
+            "doc": "See https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap to understand what each option means.",
+            "editor": "Dropdown",
+            "name": "line_cap",
+            "options": "butt,round,square",
+            "rank": 9
+        },
+        "ACA": {
+            "caption": "Line join",
+            "default_val": "round",
+            "doc": "See https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin to understand what each option means.",
+            "editor": "Dropdown",
+            "name": "line_join",
+            "options": "miter,round,bevel",
+            "rank": 10
+        }
+    }
+}

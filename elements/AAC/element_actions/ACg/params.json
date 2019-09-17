@@ -1,0 +1,33 @@
+{
+    "caption": "Check if point is contained in rectangular area in",
+    "fields": {
+        "ACh": {
+            "caption": "Point latitude",
+            "editor": "DynamicValue",
+            "name": "point_latitude",
+            "rank": 1,
+            "value": "number"
+        },
+        "ACi": {
+            "caption": "Point longitude",
+            "editor": "DynamicValue",
+            "name": "point_longitude",
+            "rank": 2,
+            "value": "number"
+        },
+        "ACj": {
+            "caption": "Container element",
+            "doc": "The unique name of the element, can be a polyline or a polygon, this action considers a rectangle made by the bounds of the container element that you specify here and check if the point is inside this rectangle. The container element must be into the Element \"Leafy Map X\" specified at the top of this action. A possible use case is to see if there's any point of interest (event, etc) near a route. Or if the user is within specified area if you located or is tracking the user.",
+            "editor": "DynamicValue",
+            "name": "container_element",
+            "rank": 3,
+            "value": "text"
+        },
+        "ACk": {
+            "caption": "Will return a boolean (yes/no) type on this map element's state called \"Is the point contained in the rectangle?\".",
+            "editor": "Label",
+            "name": "will_return_a_boolean_(yes/no)_type_on_this_map_element's_state.",
+            "rank": 0
+        }
+    }
+}

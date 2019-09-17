@@ -1,0 +1,13 @@
+{
+    "caption": "Zoom to line in",
+    "fields": {
+        "ABC": {
+            "caption": "Name of element",
+            "doc": "The name of the element to be zoomed in.",
+            "editor": "DynamicValue",
+            "name": "zoomed_element_name",
+            "rank": 0,
+            "value": "text"
+        }
+    }
+}
