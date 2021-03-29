@@ -1,0 +1,12 @@
+{
+    "caption": "Zoom to HERE route",
+    "fields": {
+        "AFd": {
+            "caption": "Route name",
+            "editor": "DynamicValue",
+            "name": "route_name",
+            "rank": 0,
+            "value": "text"
+        }
+    }
+}

@@ -1,0 +1,105 @@
+{
+    "caption": "Draw circle",
+    "fields": {
+        "AEH": {
+            "caption": "Radius",
+            "doc": "The radius of the circle, in meters.",
+            "editor": "DynamicValue",
+            "name": "radius",
+            "rank": 1,
+            "value": "number"
+        },
+        "AEI": {
+            "caption": "Draw stroke",
+            "default_val": true,
+            "doc": "Enable or disable stroke. The line of the circle.",
+            "editor": "DynamicValue",
+            "name": "draw_stroke",
+            "rank": 4,
+            "value": "boolean"
+        },
+        "AEJ": {
+            "caption": "Stroke color",
+            "default_val": "rgba(9, 124, 219, 1)",
+            "editor": "Color",
+            "name": "stroke_color",
+            "optional": true,
+            "rank": 5
+        },
+        "AEK": {
+            "caption": "Stroke weight",
+            "default_val": 3,
+            "doc": "Width in pixels.",
+            "editor": "DynamicValue",
+            "name": "stroke_weight",
+            "optional": false,
+            "rank": 6,
+            "value": "number"
+        },
+        "AEL": {
+            "caption": "Stroke opacity",
+            "default_val": 1,
+            "doc": "Transparency , from 0 to 1.",
+            "editor": "DynamicValue",
+            "name": "stroke_opacity",
+            "rank": 7,
+            "value": "number"
+        },
+        "AEM": {
+            "caption": "Circle fill",
+            "default_val": true,
+            "doc": "Enable or disable filling, the color inside the circle.",
+            "editor": "DynamicValue",
+            "name": "circle_fill",
+            "rank": 8,
+            "value": "boolean"
+        },
+        "AEN": {
+            "caption": "Fill color",
+            "default_val": "rgba(29, 138, 15, 1)",
+            "editor": "Color",
+            "name": "fill_color",
+            "rank": 9
+        },
+        "AEO": {
+            "caption": "Fill opacity",
+            "default_val": 0.2,
+            "doc": "Transparency of the inner part of the circle.",
+            "editor": "DynamicValue",
+            "name": "fill_opacity",
+            "rank": 10,
+            "value": "number"
+        },
+        "AEP": {
+            "caption": "Circle name",
+            "doc": "Write a unique name to this circle so you can refer to it later on, for example to change its radiues or focus user's view on this circle on a click of a button or some other event or action that you may want.",
+            "editor": "DynamicValue",
+            "name": "circle_name",
+            "rank": 0,
+            "value": "text"
+        },
+        "AES": {
+            "caption": "Zoom to this circle",
+            "default_val": false,
+            "doc": "Zoom map to this circle upon its creation.",
+            "editor": "DynamicValue",
+            "name": "zoom_map_to_this_circle",
+            "rank": 11,
+            "value": "boolean"
+        },
+        "AEU": {
+            "caption": "Latitude",
+            "editor": "DynamicValue",
+            "name": "latitude",
+            "rank": 2,
+            "value": "number"
+        },
+        "AEV": {
+            "caption": "Longitude",
+            "editor": "DynamicValue",
+            "name": "longitude",
+            "rank": 3,
+            "value": "number"
+        }
+    }
+}

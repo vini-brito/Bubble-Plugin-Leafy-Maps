@@ -1,0 +1,30 @@
+{
+    "caption": "Change circle radius",
+    "fields": {
+        "AEQ": {
+            "caption": "Circle name",
+            "doc": "The name specified when you created the circle.",
+            "editor": "DynamicValue",
+            "name": "circle_name",
+            "rank": 0,
+            "value": "text"
+        },
+        "AER": {
+            "caption": "New radius",
+            "doc": "In meters.",
+            "editor": "DynamicValue",
+            "name": "new_radius",
+            "rank": 1,
+            "value": "number"
+        },
+        "AET": {
+            "caption": "Zoom to this circle",
+            "default_val": false,
+            "doc": "Zoom to this circle when changing its radius.",
+            "editor": "DynamicValue",
+            "name": "zoom_to_this_circle",
+            "rank": 2,
+            "value": "boolean"
+        }
+    }
+}

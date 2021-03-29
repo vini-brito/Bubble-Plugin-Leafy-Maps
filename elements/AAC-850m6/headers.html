@@ -1,0 +1,150 @@
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.0/dist/MarkerCluster.Default.css"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.0/dist/MarkerCluster.css"/>
+
+
+	<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.0/dist/leaflet.markercluster.js"></script>
+
+
+<style>
+    @keyframes appearin {
+    from {
+        width: 1px;
+        height: 1px;
+    }
+
+    to {
+        width: 30px;
+        height: 30px;
+        }
+    }
+    
+    .tooltipText{
+        background-color: rgba(255, 255, 255, 0);
+        border: 0;
+        box-shadow: none;
+    }
+    
+    .tooltipText::before{
+        background-color: rgba(255, 255, 255, 0);
+        border: 0;
+    }
+    
+    .distance-panel{
+     	width: 300px;
+        height: 100px;
+        background-color:  rgba(20, 20, 20, 1);
+        border: 1px solid rgba(10, 10, 10, 0.2);
+        border-radius: 5px;
+        position: absolute;
+        z-index: 1000000000;
+        left: 40%;
+        bottom: 20px;
+        padding: 10px 15px;
+        font-size: 12px;
+        font-family: "Open Sans", arial;
+        box-sizing: border-box;
+        color: #DEDEDE;
+    	transform-origin: center center center;
+    }
+    
+    .ub-attribution {
+        color: hsl(225, 70%, 40%)!important;
+        transition: all 500ms !important;
+        display: inline-block;
+        background-color: transparent;
+        border-radius: 8px;
+        margin: 2px;
+        padding: 0 4px;
+        
+    }
+    .ub-attribution:hover {
+        color: hsl(225, 100%, 90%) !important;        
+        background-color: hsl(225, 50%, 10%, 0.7);
+    }
+    .leaflet-bottom .leaflet-right {
+        border-top-left-radius: 16px;
+    }
+    
+    .leaflet-control-attribution a:first-child,
+    .leaflet-control-attribution a:last-child {
+        color: hsl(225, 50%, 20%);
+    }
+    
+    .icon--div::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 4;
+        opacity: 0;
+        transition: 500ms;
+        transform: translate(-50%,-50%);
+        background-color: red;
+        border-radius: 50%;        
+    }
+    
+    @keyframes growin {
+        from {
+            width: 5px;
+            height: 5px;
+        }
+        to {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    
+    .icon--div::after {
+        content: '';
+        width: 4px;
+        height: 4px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        transition: 500ms;
+        transform: translate(-50%,-50%);
+        background-color: red;
+        border-radius: 50%;
+        
+        
+    }
+    .icon--div:hover::after {
+        opacity: 0.3;
+        animation: appearin 500ms forwards linear;
+        width: 40px;
+        height: 40px;
+    }
+    
+     .icon--div:hover::before {
+        opacity: 0.2;         
+        width: 100px;
+        height: 100px;
+    }
+    
+    .icon--div {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: hsl(1, 50%, 50%);
+    }
+    
+    
+    .nametest .leaflet-popup-content {
+        margin: 0 !important;
+    }
+    
+   
+</style>

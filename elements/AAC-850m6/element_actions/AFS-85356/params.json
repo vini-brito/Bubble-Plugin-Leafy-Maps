@@ -1,0 +1,26 @@
+{
+    "caption": "Edit HERE route",
+    "fields": {
+        "AFe": {
+            "caption": "Route name",
+            "editor": "DynamicValue",
+            "name": "route_name",
+            "rank": 0,
+            "value": "text"
+        },
+        "AFf": {
+            "caption": "Color",
+            "editor": "Color",
+            "name": "color",
+            "rank": 1
+        },
+        "AFg": {
+            "caption": "Distance limit",
+            "editor": "DynamicValue",
+            "name": "distance_limit",
+            "optional": true,
+            "rank": 2,
+            "value": "number"
+        }
+    }
+}

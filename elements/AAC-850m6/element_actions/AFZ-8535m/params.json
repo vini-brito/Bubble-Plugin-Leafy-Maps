@@ -1,0 +1,20 @@
+{
+    "caption": "Remove HERE route marker by index",
+    "fields": {
+        "AFs": {
+            "caption": "Route name",
+            "editor": "DynamicValue",
+            "name": "route_name",
+            "rank": 0,
+            "value": "text"
+        },
+        "AFt": {
+            "caption": "Marker index (from origin)",
+            "default_val": 1,
+            "editor": "DynamicValue",
+            "name": "marker",
+            "rank": 1,
+            "value": "number"
+        }
+    }
+}

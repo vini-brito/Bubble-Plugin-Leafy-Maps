@@ -1,0 +1,13 @@
+{
+    "caption": "Erase list of markers",
+    "fields": {
+        "AEi": {
+            "caption": "Unique name to erase",
+            "doc": "The unique name passed in the \"add list of markers\" workflow action.",
+            "editor": "DynamicValue",
+            "name": "unique_name_to_erase",
+            "rank": 0,
+            "value": "text"
+        }
+    }
+}

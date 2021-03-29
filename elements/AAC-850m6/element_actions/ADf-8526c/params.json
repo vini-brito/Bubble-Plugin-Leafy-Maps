@@ -1,0 +1,90 @@
+{
+    "caption": "Load Polygons List",
+    "doc": "",
+    "fields": {
+        "ADg": {
+            "caption": "Polygons List",
+            "editor": "DynamicValue",
+            "long_text": true,
+            "name": "json",
+            "rank": 0,
+            "value": "text"
+        },
+        "ADm": {
+            "caption": "Stroke",
+            "default_val": false,
+            "editor": "DynamicValue",
+            "name": "draw_stroke",
+            "optional": true,
+            "rank": 1,
+            "value": "boolean"
+        },
+        "ADn": {
+            "caption": "Stroke Color",
+            "editor": "Color",
+            "name": "stroke_color",
+            "optional": true,
+            "rank": 2
+        },
+        "ADo": {
+            "caption": "Stroke Weight",
+            "doc": "In pixels.",
+            "editor": "DynamicValue",
+            "name": "stroke_weight",
+            "optional": true,
+            "rank": 3,
+            "value": "number"
+        },
+        "ADp": {
+            "caption": "Stroke Opacity",
+            "doc": "In percentage. So 1 is 100% and 0.5 is 50%.",
+            "editor": "DynamicValue",
+            "name": "stroke_opacity",
+            "optional": true,
+            "rank": 4,
+            "value": "number"
+        },
+        "ADq": {
+            "caption": "Line Cap",
+            "default_val": "round",
+            "editor": "Dropdown",
+            "name": "line_cap",
+            "optional": true,
+            "options": "butt,round,square",
+            "rank": 5
+        },
+        "ADr": {
+            "caption": "Line Join",
+            "default_val": "round",
+            "editor": "Dropdown",
+            "name": "line_join",
+            "optional": true,
+            "options": "miter,round,bevel",
+            "rank": 6
+        },
+        "ADs": {
+            "caption": "Polygon Fill",
+            "default_val": true,
+            "editor": "DynamicValue",
+            "name": "polygon_fill",
+            "optional": true,
+            "rank": 7,
+            "value": "boolean"
+        },
+        "ADt": {
+            "caption": "Fill Color",
+            "editor": "Color",
+            "name": "fill_color",
+            "optional": true,
+            "rank": 8
+        },
+        "ADu": {
+            "caption": "Fill Opacity",
+            "editor": "DynamicValue",
+            "name": "fill_opacity",
+            "optional": true,
+            "rank": 9,
+            "value": "number"
+        }
+    }
+}

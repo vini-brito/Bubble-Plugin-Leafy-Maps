@@ -1,0 +1,193 @@
+{
+    "caption": "Get HERE route",
+    "fields": {
+        "AEp": {
+            "caption": "Origin address",
+            "default_val": "",
+            "editor": "DynamicValue",
+            "name": "origin_address",
+            "rank": 0,
+            "value": "text"
+        },
+        "AEq": {
+            "caption": "Destination address",
+            "editor": "DynamicValue",
+            "name": "destination_address",
+            "rank": 1,
+            "value": "text"
+        },
+        "AEr": {
+            "caption": "Use coordinates",
+            "default_val": false,
+            "editor": "Checkbox",
+            "name": "use_coordinates",
+            "rank": 2
+        },
+        "AEs": {
+            "caption": "Latitude list",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "latitude_list",
+            "optional": true,
+            "rank": 3,
+            "value": "number"
+        },
+        "AEt": {
+            "caption": "Longitude list",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "longitude_list",
+            "optional": true,
+            "rank": 4,
+            "value": "number"
+        },
+        "AEu": {
+            "caption": "Route name",
+            "editor": "DynamicValue",
+            "name": "route_name",
+            "rank": 5,
+            "value": "text"
+        },
+        "AEv": {
+            "caption": "Route color",
+            "default_val": "rgba(85, 224, 85, 1)",
+            "editor": "Color",
+            "name": "route_color",
+            "rank": 6
+        },
+        "AEw": {
+            "caption": "Base route color",
+            "default_val": "rgba(255, 255, 255, 1)",
+            "editor": "Color",
+            "name": "base_route_color",
+            "rank": 7
+        },
+        "AEy": {
+            "caption": "Distance limit",
+            "editor": "DynamicValue",
+            "name": "distance_limit",
+            "optional": true,
+            "rank": 8,
+            "value": "number"
+        },
+        "AEz": {
+            "caption": "------------- Restrictions ------------- ",
+            "editor": "Label",
+            "name": "-------------_restrictions_-------------_",
+            "rank": 9
+        },
+        "AFA": {
+            "caption": "Truck type",
+            "default_val": "truck",
+            "editor": "Dropdown",
+            "name": "truck_type",
+            "options": "truck,tractor truck",
+            "rank": 10
+        },
+        "AFB": {
+            "caption": "Tunnel category",
+            "editor": "Dropdown",
+            "name": "tunnel_category",
+            "optional": true,
+            "options": "B,C,D,E",
+            "rank": 11
+        },
+        "AFC": {
+            "caption": "Truck restriction penalty",
+            "editor": "Dropdown",
+            "name": "truck_restriction_penalty",
+            "optional": true,
+            "options": "strict,soft",
+            "rank": 12
+        },
+        "AFE": {
+            "caption": "Axle count",
+            "editor": "DynamicValue",
+            "name": "axle_count",
+            "optional": true,
+            "rank": 13,
+            "value": "number"
+        },
+        "AFF": {
+            "caption": "Limited weight",
+            "doc": "In tons",
+            "editor": "DynamicValue",
+            "name": "limited_weight",
+            "optional": true,
+            "rank": 14,
+            "value": "number"
+        },
+        "AFG": {
+            "caption": "Weight per axle",
+            "doc": "In tons",
+            "editor": "DynamicValue",
+            "name": "weight_per_axle",
+            "optional": true,
+            "rank": 15,
+            "value": "number"
+        },
+        "AFH": {
+            "caption": "Height",
+            "editor": "DynamicValue",
+            "name": "height",
+            "optional": true,
+            "rank": 16,
+            "value": "number"
+        },
+        "AFI": {
+            "caption": "Width",
+            "editor": "DynamicValue",
+            "name": "width",
+            "optional": true,
+            "rank": 17,
+            "value": "number"
+        },
+        "AFJ": {
+            "caption": "Length",
+            "editor": "DynamicValue",
+            "name": "length",
+            "optional": true,
+            "rank": 18,
+            "value": "number"
+        },
+        "AFK": {
+            "caption": "Shipped hazardous goods",
+            "editor": "Dropdown",
+            "name": "shipped_hazardous_goods",
+            "optional": true,
+            "options": "explosive,gas,flammable,combustible,organic,poison,radio active,corrosive,poisonous inhalation,harmful to water",
+            "rank": 19
+        },
+        "AFL": {
+            "caption": "Weights per axle (tandem)",
+            "editor": "DynamicValue",
+            "name": "weights_per_axle_tandem",
+            "optional": true,
+            "rank": 20,
+            "value": "number"
+        },
+        "AFM": {
+            "caption": "Weights per axle (single)",
+            "editor": "DynamicValue",
+            "name": "weights_per_axle_single",
+            "optional": true,
+            "rank": 21,
+            "value": "number"
+        },
+        "AFN": {
+            "caption": "Trailer forbidden",
+            "default_val": false,
+            "editor": "Checkbox",
+            "name": "trailer_forbidden",
+            "rank": 22
+        },
+        "AFO": {
+            "caption": "Trailers count",
+            "editor": "DynamicValue",
+            "name": "trailers_count",
+            "optional": true,
+            "rank": 23,
+            "value": "number"
+        }
+    }
+}

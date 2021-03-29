@@ -1,0 +1,12 @@
+{
+    "caption": "Export HERE route",
+    "fields": {
+        "AFl": {
+            "caption": "Route name",
+            "editor": "DynamicValue",
+            "name": "route_name",
+            "rank": 0,
+            "value": "text"
+        }
+    }
+}

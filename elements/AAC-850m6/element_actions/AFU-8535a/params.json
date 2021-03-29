@@ -1,0 +1,20 @@
+{
+    "caption": "Show HERE route",
+    "fields": {
+        "AFi": {
+            "caption": "Route name",
+            "editor": "DynamicValue",
+            "name": "route_name",
+            "rank": 0,
+            "value": "text"
+        },
+        "AFj": {
+            "caption": "Zoom to route",
+            "default_val": true,
+            "editor": "Checkbox",
+            "name": "zoom_to_route",
+            "rank": 1,
+            "value": "text"
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "caption": "Distance between",
+    "fields": {
+        "ADT": {
+            "caption": "Latitude 1",
+            "editor": "DynamicValue",
+            "name": "lat1",
+            "rank": 0,
+            "value": "number"
+        },
+        "ADU": {
+            "caption": "Longitude 1",
+            "editor": "DynamicValue",
+            "name": "long1",
+            "rank": 1,
+            "value": "number"
+        },
+        "ADV": {
+            "caption": "Latitude 2",
+            "editor": "DynamicValue",
+            "name": "lat2",
+            "rank": 2,
+            "value": "number"
+        },
+        "ADW": {
+            "caption": "Longitude 2",
+            "editor": "DynamicValue",
+            "name": "long2",
+            "rank": 3,
+            "value": "number"
+        }
+    }
+}

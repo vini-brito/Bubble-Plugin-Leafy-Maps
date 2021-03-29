@@ -1,0 +1,529 @@
+{
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 300,
+        "width": 400
+    },
+    "display": "Leafy map",
+    "events": {
+        "ACo": {
+            "caption": "Location found",
+            "name": "location_found"
+        },
+        "ADD": {
+            "caption": "Location error",
+            "name": "location_error"
+        },
+        "ADQ": {
+            "caption": "Marker clicked",
+            "name": "marker_clicked"
+        },
+        "AGH": {
+            "caption": "HERE suggestion is published",
+            "name": "here_suggestion"
+        },
+        "AGI": {
+            "caption": "HERE route was exported",
+            "name": "route_exported"
+        },
+        "AGJ": {
+            "caption": "HERE route summary was published",
+            "name": "route_selected"
+        },
+        "AGK": {
+            "caption": "HERE route limit was exceeded",
+            "name": "route_limit_exceeded"
+        },
+        "AGl": {
+            "caption": "no route was found",
+            "name": "no_route_was_found"
+        },
+        "AHA": {
+            "caption": "Ambulance location published",
+            "name": "ambulance_location"
+        }
+    },
+    "fields": {
+        "ADb": {
+            "caption": "Congratulations fellow Bubbler! You've just attained more power by installing this plugin. Come visit your custom plugin shop www.unlimitedbubbling.dev and get even more!",
+            "editor": "Label",
+            "name": "a",
+            "rank": 0
+        },
+        "AGx": {
+            "caption": "Load ambulance routes",
+            "default_val": false,
+            "editor": "DynamicValue",
+            "name": "load_ambulance_routes",
+            "rank": 1,
+            "value": "boolean"
+        },
+        "AGy": {
+            "caption": "Ambulance table source",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "emergency_table",
+            "optional": true,
+            "rank": 2,
+            "value": "_any_thing"
+        },
+        "AHI": {
+            "caption": "Ambulance table type",
+            "editor": "custom_type",
+            "name": "ambulance_table_type",
+            "optional": true,
+            "rank": 3
+        },
+        "AHJ": {
+            "caption": "Name field",
+            "editor": "custom_field_AHI",
+            "name": "name_field",
+            "optional": true,
+            "rank": 4
+        },
+        "AHK": {
+            "caption": "Path field",
+            "editor": "custom_field_AHI",
+            "name": "path_field",
+            "optional": true,
+            "rank": 5
+        },
+        "AHL": {
+            "caption": "Location field",
+            "editor": "custom_field_AHI",
+            "name": "location_field",
+            "optional": true,
+            "rank": 6
+        },
+        "AHM": {
+            "caption": "Icon field",
+            "editor": "custom_field_AHI",
+            "name": "icon_field",
+            "optional": true,
+            "rank": 7
+        }
+    },
+    "icon": "ion-android-map",
+    "property_applications": {
+        "Border": true,
+        "BoxShadow": true,
+        "MinWidth": true,
+        "resizable": true
+    },
+    "states": {
+        "ACP": {
+            "caption": "Stadia route request body",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "stadia_route_request_body",
+            "value": "text"
+        },
+        "ACf": {
+            "caption": "Is the point contained in the rectangle?",
+            "initialization_code": {
+                "add_debugger": false,
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "point_is_contained",
+            "value": "boolean"
+        },
+        "ACr": {
+            "caption": "User's latitude",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "user_latitude",
+            "value": "number"
+        },
+        "ACs": {
+            "caption": "User's longitude",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "user_longitude",
+            "value": "number"
+        },
+        "ACt": {
+            "caption": "Boundary Northeast Lat",
+            "doc": "Geographical bounds of the area user is located in (with respect to the accuracy of location).",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "user_bounds_northeast_latitude",
+            "value": "number"
+        },
+        "ACu": {
+            "caption": "Boundary Northeast Lng",
+            "doc": "Geographical bounds of the area user is located in (with respect to the accuracy of location).",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "user_bounds_northeast_longitude",
+            "value": "number"
+        },
+        "ACv": {
+            "caption": "Boundary Southwest Lat",
+            "doc": "Geographical bounds of the area user is located in (with respect to the accuracy of location).",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "user_bounds_southwest_latitude",
+            "value": "number"
+        },
+        "ACw": {
+            "caption": "Boundary Southwest Lng",
+            "doc": "Geographical bounds of the area user is located in (with respect to the accuracy of location).",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "user_bounds_southwest_longitude",
+            "value": "number"
+        },
+        "ACx": {
+            "caption": "Accuracy",
+            "doc": "Accuracy of location in meters.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "accuracy",
+            "value": "number"
+        },
+        "ACy": {
+            "caption": "Altitude",
+            "doc": "Height of the position above the WGS84 ellipsoid in meters.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "altitude",
+            "value": "number"
+        },
+        "ACz": {
+            "caption": "Altitude accuracy",
+            "doc": "Accuracy of altitude in meters.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "altitude_accuracy",
+            "value": "number"
+        },
+        "ADA": {
+            "caption": "Heading",
+            "doc": "The direction of travel in degrees counting clockwise from true North.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "heading",
+            "value": "number"
+        },
+        "ADB": {
+            "caption": "Speed",
+            "doc": "Current velocity in meters per second.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "speed",
+            "value": "number"
+        },
+        "ADC": {
+            "caption": "Timestamp",
+            "doc": "The time when the position was acquired. In UNIX format.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "timestamp",
+            "value": "number"
+        },
+        "ADJ": {
+            "caption": "Center's Latitude",
+            "doc": "The map center latitude",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "map_center_latitude",
+            "value": "number"
+        },
+        "ADK": {
+            "caption": "Center's Longitude",
+            "doc": "The map center longitude",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "map_center_longitude",
+            "value": "number"
+        },
+        "ADL": {
+            "caption": "Marker Clicked ID",
+            "doc": "Current clicked marker ID (unique name)",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "marker_clicked_id",
+            "value": "text"
+        },
+        "ADR": {
+            "caption": "Calculated distance",
+            "doc": "Distance between two geographical coordinates according to the map's CRS. In meters.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "calculated_distance",
+            "value": "number"
+        },
+        "ADY": {
+            "caption": "Speed (km/h)",
+            "doc": "Current velocity in km/h",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "speed_kph",
+            "value": "number"
+        },
+        "ADZ": {
+            "caption": "Speed (mi/h)",
+            "doc": "Current velocity in mi/h",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "speed_mph",
+            "value": "number"
+        },
+        "ADa": {
+            "caption": "Is Being Tracked",
+            "doc": "When tracking a user the value is yes, otherwise it's empty",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "is_being_tracked",
+            "value": "boolean"
+        },
+        "ADd": {
+            "caption": "Polygons List",
+            "doc": "A list of all polygons inside the map.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": false,
+            "name": "polygons_list",
+            "value": "text"
+        },
+        "AEg": {
+            "caption": "Marker clicked index",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "marker_clicked_index",
+            "value": "number"
+        },
+        "AGL": {
+            "caption": "HERE suggestion",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": true,
+            "name": "here_suggestion_state",
+            "value": "text"
+        },
+        "AGM": {
+            "caption": "HERE route latitude",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": true,
+            "name": "here_route_latitude",
+            "value": "number"
+        },
+        "AGN": {
+            "caption": "HERE route longitude",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": true,
+            "name": "here_route_longitude",
+            "value": "number"
+        },
+        "AGO": {
+            "caption": "HERE route origin address",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "here_route_origin_address",
+            "value": "text"
+        },
+        "AGP": {
+            "caption": "HERE route destination address",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "here_route_destination_address",
+            "value": "text"
+        },
+        "AGQ": {
+            "caption": "HERE route marker addresses",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": true,
+            "name": "here_route_marker_addresses",
+            "value": "text"
+        },
+        "AGR": {
+            "caption": "HERE route name",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "here_route_name",
+            "value": "text"
+        },
+        "AGS": {
+            "caption": "HERE route distance",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "here_route_distance",
+            "value": "number"
+        },
+        "AGT": {
+            "caption": "HERE route traffic time",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "here_route_traffic_time",
+            "value": "number"
+        },
+        "AGU": {
+            "caption": "HERE route flags",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": true,
+            "name": "here_route_flags",
+            "value": "text"
+        },
+        "AGV": {
+            "caption": "HERE route summary text",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "here_route_summary_text",
+            "value": "text"
+        },
+        "AGW": {
+            "caption": "HERE route base time",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "here_route_base_time",
+            "value": "number"
+        },
+        "AGX": {
+            "caption": "HERE route travel time",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "here_route_travel_time",
+            "value": "number"
+        },
+        "AGY": {
+            "caption": "Here route restrictions",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": true,
+            "name": "here_route_restrictions",
+            "value": "text"
+        },
+        "AGa": {
+            "caption": "HERE route color",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "here_route_color",
+            "value": "text"
+        },
+        "AGb": {
+            "caption": "HERE route base color",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "here_route_base_color",
+            "value": "text"
+        },
+        "AGc": {
+            "caption": "HERE route base latitude",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": true,
+            "name": "here_route_base_latitude",
+            "value": "number"
+        },
+        "AGd": {
+            "caption": "HERE route base longitude",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": true,
+            "name": "here_route_base_longitude",
+            "value": "number"
+        },
+        "AGe": {
+            "caption": "HERE route distance limit",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "here_route_distance_limit",
+            "value": "number"
+        },
+        "AGr": {
+            "caption": "debug_message",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "debug_message",
+            "value": "text"
+        },
+        "AHB": {
+            "caption": "Ambulance location",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "ambulance_location",
+            "value": "text"
+        },
+        "AHE": {
+            "caption": "Ambulance name",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "ambulance_name",
+            "value": "text"
+        },
+        "AHG": {
+            "caption": "Ambulance path",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": false,
+            "name": "ambulance_path",
+            "value": "text"
+        },
+        "AHH": {
+            "caption": "Ambulance icon",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "ambulance_icon",
+            "value": "text"
+        },
+        "AHN": {
+            "caption": "Ambulance is close",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "ambulance_is_close",
+            "value": "boolean"
+        }
+    }
+}

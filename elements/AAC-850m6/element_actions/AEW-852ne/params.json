@@ -1,0 +1,84 @@
+{
+    "caption": "Add list of markers",
+    "fields": {
+        "AEX": {
+            "caption": "List of latitudes",
+            "doc": "A list of numbers like 50.405068",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "list_of_latitudes",
+            "rank": 0,
+            "value": "number"
+        },
+        "AEY": {
+            "caption": "List of longitudes",
+            "doc": "A list of numbers like 50.405068",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "list_of_longitudes",
+            "rank": 1,
+            "value": "number"
+        },
+        "AEZ": {
+            "caption": "Show popup on click?",
+            "default_val": false,
+            "editor": "DynamicValue",
+            "name": "popup_on_click",
+            "optional": true,
+            "rank": 2,
+            "value": "boolean"
+        },
+        "AEa": {
+            "caption": "Popup texts",
+            "doc": "List of texts to be displayed in these marker's popups. First item goes in first marker, as expected I presume.",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "list_of_popup_texts",
+            "optional": true,
+            "rank": 3,
+            "value": "text"
+        },
+        "AEb": {
+            "caption": "Marker style",
+            "default_val": "Blue",
+            "editor": "Dropdown",
+            "name": "marker_style",
+            "options": "Blue,Yellow,Green,Red,Brown,White,Black",
+            "rank": 4
+        },
+        "AEc": {
+            "caption": "Use custom icon?",
+            "default_val": false,
+            "doc": "Allows you to upload your own .png image to be used as an icon or marker instead of the default marker. You can optionally upload a .png image to be the icon shadow if you want to, but it's not necessary.",
+            "editor": "DynamicValue",
+            "name": "use_custom_icon",
+            "optional": true,
+            "rank": 5,
+            "value": "boolean"
+        },
+        "AEd": {
+            "caption": "Custom icon",
+            "editor": "DynamicValue",
+            "name": "custom_icon_url",
+            "optional": true,
+            "rank": 6,
+            "value": "image"
+        },
+        "AEe": {
+            "caption": "Custom icon shadow",
+            "editor": "DynamicValue",
+            "name": "custom_icon_shadow_url",
+            "optional": true,
+            "rank": 7,
+            "value": "image"
+        },
+        "AEf": {
+            "caption": "Unique name",
+            "doc": "A unique name to this series of markers. They will be suffixed with their index, for example if you write \"city\" the first one will be city1 and the second will be city2.",
+            "editor": "DynamicValue",
+            "name": "unique_name",
+            "rank": 8,
+            "value": "text"
+        }
+    }
+}

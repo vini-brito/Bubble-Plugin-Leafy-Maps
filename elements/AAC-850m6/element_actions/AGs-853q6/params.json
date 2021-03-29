@@ -1,0 +1,13 @@
+{
+    "caption": "Jest action",
+    "fields": {
+        "AGt": {
+            "caption": "File",
+            "default_val": "//s3.amazonaws.com/appforest_uf/f1612384246572x124790216536782910/redcircle.svg",
+            "editor": "DynamicValue",
+            "name": "file",
+            "rank": 0,
+            "value": "image"
+        }
+    }
+}

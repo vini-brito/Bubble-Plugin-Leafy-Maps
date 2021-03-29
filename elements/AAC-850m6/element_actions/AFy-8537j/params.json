@@ -1,0 +1,78 @@
+{
+    "caption": "Load HERE routes from table",
+    "fields": {
+        "AFz": {
+            "caption": "Table source",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "table_source",
+            "rank": 0,
+            "value": "_any_thing"
+        },
+        "AGA": {
+            "caption": "Table type",
+            "editor": "custom_type",
+            "name": "table_type",
+            "rank": 1
+        },
+        "AGB": {
+            "caption": "Latitude field",
+            "editor": "custom_field_AGA",
+            "field_list": true,
+            "field_type_restriction": "number",
+            "name": "latitude_field",
+            "rank": 2
+        },
+        "AGC": {
+            "caption": "Longitude field",
+            "editor": "custom_field_AGA",
+            "field_list": true,
+            "field_type_restriction": "number",
+            "name": "longitude_field",
+            "rank": 3
+        },
+        "AGD": {
+            "caption": "Color field",
+            "editor": "custom_field_AGA",
+            "field_type_restriction": "text_image_file",
+            "name": "color_field",
+            "rank": 4
+        },
+        "AGE": {
+            "caption": "Name field",
+            "editor": "custom_field_AGA",
+            "field_type_restriction": "text_image_file",
+            "name": "name_field",
+            "rank": 5
+        },
+        "AGF": {
+            "caption": "Distance limit field",
+            "editor": "custom_field_AGA",
+            "field_type_restriction": "number",
+            "name": "distance_limit_field",
+            "rank": 6
+        },
+        "AGG": {
+            "caption": "Show all routes",
+            "default_val": true,
+            "editor": "Checkbox",
+            "name": "show_all_routes",
+            "rank": 8
+        },
+        "AGZ": {
+            "caption": "Route restriction field",
+            "editor": "custom_field_AGA",
+            "field_list": true,
+            "field_type_restriction": "text_image_file",
+            "name": "route_restriction_field",
+            "rank": 7
+        },
+        "AGf": {
+            "caption": "Base color field",
+            "editor": "custom_field_AGA",
+            "field_type_restriction": "text_image_file",
+            "name": "base_color_field",
+            "rank": 9
+        }
+    }
+}

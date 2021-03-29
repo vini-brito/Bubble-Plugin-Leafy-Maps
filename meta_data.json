@@ -1,0 +1,15 @@
+{
+    "categories": {
+        "0": "ecommerce",
+        "1": "health & fitness",
+        "2": "media",
+        "3": "mobile",
+        "4": "location"
+    },
+    "description": "A free, powerful and flexible map plugin based on Leaflet.\n\nCome visit your custom plugin shop www.unlimitedbubbling.dev and be limitless!",
+    "image": "//s3.amazonaws.com/appforest_uf/f1564188285552x910314096732212500/three-leaves.png",
+    "license": "open_source",
+    "link": "https://forum.bubble.is/t/leafy-maps-new-free-plugin/63757",
+    "name": "Leafy Maps",
+    "plugin_instructions": "See https://forum.bubble.is/t/leafy-maps-new-free-plugin/63757 for instructions."
+}

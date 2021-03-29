@@ -1,0 +1,43 @@
+{
+    "caption": "Add HERE route marker",
+    "fields": {
+        "AFm": {
+            "caption": "Route name",
+            "editor": "DynamicValue",
+            "name": "route_name",
+            "rank": 0,
+            "value": "text"
+        },
+        "AFn": {
+            "caption": "Latitude",
+            "editor": "DynamicValue",
+            "name": "latitude",
+            "optional": true,
+            "rank": 1,
+            "value": "number"
+        },
+        "AFo": {
+            "caption": "Longitude",
+            "editor": "DynamicValue",
+            "name": "longitude",
+            "optional": true,
+            "rank": 2,
+            "value": "number"
+        },
+        "AFp": {
+            "caption": "Use address instead",
+            "default_val": false,
+            "editor": "Checkbox",
+            "name": "use_address_instead",
+            "rank": 3
+        },
+        "AFq": {
+            "caption": "Address",
+            "editor": "DynamicValue",
+            "name": "address",
+            "optional": true,
+            "rank": 4,
+            "value": "text"
+        }
+    }
+}

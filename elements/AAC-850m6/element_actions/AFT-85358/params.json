@@ -1,0 +1,12 @@
+{
+    "caption": "Get HERE suggestion",
+    "fields": {
+        "AFh": {
+            "caption": "Text",
+            "editor": "DynamicValue",
+            "name": "text",
+            "rank": 0,
+            "value": "text"
+        }
+    }
+}

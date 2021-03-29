@@ -1,0 +1,127 @@
+{
+    "caption": "Show map on",
+    "fields": {
+        "AAK": {
+            "caption": "Mapxbox tile",
+            "editor": "Dropdown",
+            "name": "mapbox_tile",
+            "optional": true,
+            "options": "streets-v11,outdoors-v11,light-v10,dark-v10,satellite-v9,satellite-streets-v11",
+            "rank": 6
+        },
+        "AAN": {
+            "caption": "Initial view",
+            "editor": "Label",
+            "name": "initial_view",
+            "rank": 2
+        },
+        "AAO": {
+            "caption": "Initial view latitude",
+            "doc": "",
+            "editor": "DynamicValue",
+            "name": "initial_view_latitude",
+            "rank": 3,
+            "value": "number"
+        },
+        "AAP": {
+            "caption": "Initial view longitude",
+            "editor": "DynamicValue",
+            "name": "initial_view_longitude",
+            "rank": 4,
+            "value": "number"
+        },
+        "AAQ": {
+            "caption": "Zoom level",
+            "doc": "From 1 to 20, with 20 being as close as possible to the ground.",
+            "editor": "DynamicValue",
+            "name": "zoom_level",
+            "rank": 5,
+            "value": "number"
+        },
+        "AAj": {
+            "caption": "Tile provider",
+            "doc": "Choose one and use the options that concern to this provider below. Everything in the other options will be ignored.",
+            "editor": "Dropdown",
+            "name": "tile_provider",
+            "options": "Mapbox,Stadia,Here",
+            "rank": 1
+        },
+        "AAv": {
+            "caption": "Stadia tile",
+            "editor": "Dropdown",
+            "name": "stadia_tile",
+            "optional": true,
+            "options": "Alidade Smooth,Alidade Smooth Dark,Outdoors,OSM Bright",
+            "rank": 7,
+            "value": "text"
+        },
+        "ABZ": {
+            "caption": "Unique map name",
+            "doc": "Write a unique name to this map, so you can have more than one map in the same screen.",
+            "editor": "DynamicValue",
+            "name": "unique_map_name",
+            "rank": 0,
+            "value": "text"
+        },
+        "ADc": {
+            "caption": "Congratulations fellow Bubbler! You've just attained more power by installing this plugin. Come visit your custom plugin shop www.unlimitedbubbling.dev and get even more!",
+            "editor": "Label",
+            "name": "ss",
+            "rank": 15
+        },
+        "ADl": {
+            "caption": "Enable Drawing",
+            "default_val": true,
+            "doc": "It enables the user to draw polygons on the map, it also enables measuring distances.",
+            "editor": "DynamicValue",
+            "name": "enable_drawing",
+            "rank": 9,
+            "value": "boolean"
+        },
+        "AEm": {
+            "caption": "Here tile",
+            "default_val": "normal day",
+            "doc": "",
+            "editor": "Dropdown",
+            "name": "here_tile",
+            "optional": true,
+            "options": "normal day,normal day grey,normal day transit,normal night,normal night grey,pedestrian day,pedestrian night,reduced day",
+            "rank": 8
+        },
+        "AGm": {
+            "caption": "HERE Tooltip style",
+            "editor": "Label",
+            "name": "here_tooltip",
+            "rank": 10
+        },
+        "AGn": {
+            "caption": "Font color",
+            "default_val": "rgba(17, 59, 122, 1)",
+            "editor": "Color",
+            "name": "tp_color",
+            "rank": 11
+        },
+        "AGo": {
+            "caption": "Background color",
+            "default_val": "rgba(230, 230, 230, 1)",
+            "editor": "Color",
+            "name": "tp_bg",
+            "rank": 12
+        },
+        "AGp": {
+            "caption": "Border color",
+            "default_val": "rgba(230, 230, 230, 0.75)",
+            "editor": "Color",
+            "name": "border_color",
+            "rank": 13
+        },
+        "AGq": {
+            "caption": "Border radius",
+            "default_val": 4,
+            "editor": "DynamicValue",
+            "name": "border_radius",
+            "rank": 14,
+            "value": "number"
+        }
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "caption": "Set Drawing Style",
+    "fields": {
+        "ADw": {
+            "caption": "Stroke",
+            "default_val": true,
+            "editor": "DynamicValue",
+            "name": "draw_stroke",
+            "optional": true,
+            "rank": 0,
+            "value": "boolean"
+        },
+        "ADx": {
+            "caption": "Stroke Color",
+            "editor": "Color",
+            "name": "stroke_color",
+            "optional": true,
+            "rank": 1
+        },
+        "ADy": {
+            "caption": "Stroke Weight",
+            "editor": "DynamicValue",
+            "name": "stroke_weight",
+            "optional": true,
+            "rank": 2,
+            "value": "number"
+        },
+        "ADz": {
+            "caption": "Stroke Opacity",
+            "editor": "DynamicValue",
+            "name": "stroke_opacity",
+            "optional": true,
+            "rank": 3,
+            "value": "number"
+        },
+        "AEA": {
+            "caption": "Line Cap",
+            "editor": "Dropdown",
+            "name": "line_cap",
+            "optional": true,
+            "options": "butt,round,square",
+            "rank": 4
+        },
+        "AEB": {
+            "caption": "Line Join",
+            "editor": "Dropdown",
+            "name": "line_join",
+            "optional": true,
+            "options": "miter,round,bevel",
+            "rank": 5
+        },
+        "AEC": {
+            "caption": "Polygon Fill",
+            "default_val": true,
+            "editor": "DynamicValue",
+            "name": "polygon_fill",
+            "optional": true,
+            "rank": 6,
+            "value": "boolean"
+        },
+        "AED": {
+            "caption": "Fill Color",
+            "editor": "Color",
+            "name": "fill_color",
+            "optional": true,
+            "rank": 7
+        },
+        "AEE": {
+            "caption": "Fill Opacity",
+            "editor": "DynamicValue",
+            "name": "fill_opacity",
+            "optional": true,
+            "rank": 8,
+            "value": "number"
+        },
+        "AEl": {
+            "caption": "Show distance",
+            "default_val": true,
+            "editor": "DynamicValue",
+            "name": "show_distance",
+            "rank": 9,
+            "value": "boolean"
+        }
+    }
+}

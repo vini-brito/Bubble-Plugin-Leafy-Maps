@@ -39,6 +39,14 @@
         "ABY": {
             "name": "bg",
             "url": "//dd7tel2830j4w.cloudfront.net/f1564192295493x883459422171276200/Kazam_screenshot_00000.png"
+        },
+        "ADh": {
+            "name": "pencil",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1591364526380x334180475752705800/pencil.png"
+        },
+        "AEk": {
+            "name": "new leaflet",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1600950880742x923580300813200400/leaflet.js"
         }
     },
     "dependencies": {
@@ -51,6 +59,10 @@
         },
         "ACU": {
             "caption": "Openweathermap API key",
+            "type": "client_safe"
+        },
+        "AEn": {
+            "caption": "Here access token",
             "type": "client_safe"
         }
     }
