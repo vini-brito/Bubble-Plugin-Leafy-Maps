@@ -27,7 +27,7 @@ function(instance, properties, context) {
 			shadowUrl: `https:${properties.custom_icon_shadow_url}`,
 		});
 
-		instance.data[`${properties.marker_name}`] = L.marker([properties.latitude, properties.longitude], { icon: myIcon }).on('click', markerClicked).addTo(instance.data.mymap).bindPopup(properties.popup_text);
+		instance.data[`${properties.marker_name}`] = L.marker([properties.latitude, properties.longitude], { icon: myIcon }).on('click', markerClicked).on('mouseover', markerHovered).on('mouseout', markerUnHovered).addTo(instance.data.mymap).bindPopup(properties.popup_text);
 
 	} else if (properties.popup_on_click && !properties.use_custom_icon) {
 
@@ -41,7 +41,7 @@ function(instance, properties, context) {
 			popupAnchor: [0, -30]   // point from which the popup should open relative to the iconAnchor
 		});
 
-		instance.data[`${properties.marker_name}`] = L.marker([properties.latitude, properties.longitude], { icon: myIcon }).on('click', markerClicked).addTo(instance.data.mymap).bindPopup(properties.popup_text);
+		instance.data[`${properties.marker_name}`] = L.marker([properties.latitude, properties.longitude], { icon: myIcon }).on('click', markerClicked).on('mouseover', markerHovered).on('mouseout', markerUnHovered).addTo(instance.data.mymap).bindPopup(properties.popup_text);
 
 	} else if (!properties.popup_on_click && properties.use_custom_icon) {
 
@@ -50,7 +50,7 @@ function(instance, properties, context) {
 			shadowUrl: `https:${properties.custom_icon_shadow_url}`,
 		});
 
-		instance.data[`${properties.marker_name}`] = L.marker([properties.latitude, properties.longitude], { icon: myIcon }).on('click', markerClicked).addTo(instance.data.mymap);
+		instance.data[`${properties.marker_name}`] = L.marker([properties.latitude, properties.longitude], { icon: myIcon }).on('click', markerClicked).on('mouseover', markerHovered).on('mouseout', markerUnHovered).addTo(instance.data.mymap);
 
 	} else if (!properties.popup_on_click && !properties.use_custom_icon) {
 
@@ -64,7 +64,7 @@ function(instance, properties, context) {
 			popupAnchor: [0, -30]   // point from which the popup should open relative to the iconAnchor
 		});
 
-		instance.data[`${properties.marker_name}`] = L.marker([properties.latitude, properties.longitude], { icon: myIcon }).on('click', markerClicked).addTo(instance.data.mymap);
+		instance.data[`${properties.marker_name}`] = L.marker([properties.latitude, properties.longitude], { icon: myIcon }).on('click', markerClicked).on('mouseover', markerHovered).on('mouseout', markerUnHovered).addTo(instance.data.mymap);
 
 	}
     
@@ -75,6 +75,22 @@ function(instance, properties, context) {
             instance.publishState("marker_clicked_id", properties.marker_name);          
             instance.triggerEvent("marker_clicked");
         }
-    }
+	}
+	
+	function markerHovered() {
+
+		instance.publishState("marker_hovered_id", properties.marker_name);
+		instance.triggerEvent('marker_hovered');
+
+	}
+
+	function markerUnHovered() {
+
+		instance.publishState("marker_unhovered_id", properties.marker_name);
+		instance.triggerEvent('marker_unhovered');
+
+	}
+
+    
 
 }

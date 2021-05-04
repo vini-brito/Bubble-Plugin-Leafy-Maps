@@ -66,6 +66,7 @@
         },
         "AEe": {
             "caption": "Custom icon shadow",
+            "doc": "",
             "editor": "DynamicValue",
             "name": "custom_icon_shadow_url",
             "optional": true,
@@ -79,6 +80,15 @@
             "name": "unique_name",
             "rank": 8,
             "value": "text"
+        },
+        "AHR": {
+            "caption": "Clusterize markers",
+            "default_val": false,
+            "doc": "If \"yes\", will group these markers in a cluster. A cluster is a colored circle with a number saying how many markers it represents, when the user zooms in or clicks the circle, it disappears and displays its markers. Upon zoom out, the markers are again folded back into the circle. Clicking the cluster will zoom into it and spread its markers. Hovering it will reveal the polygon area that the markers inside it are covering.",
+            "editor": "DynamicValue",
+            "name": "clusterize_markers",
+            "rank": 9,
+            "value": "boolean"
         }
     }
 }

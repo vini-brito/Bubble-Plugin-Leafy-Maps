@@ -39,9 +39,17 @@
             "caption": "no route was found",
             "name": "no_route_was_found"
         },
-        "AHA": {
-            "caption": "Ambulance location published",
-            "name": "ambulance_location"
+        "AHU": {
+            "caption": "Marker hovered",
+            "name": "marker_hovered"
+        },
+        "AHf": {
+            "caption": "Map clicked",
+            "name": "map_clicked"
+        },
+        "AHi": {
+            "caption": "Marker unhovered",
+            "name": "marker_unhovered"
         }
     },
     "fields": {
@@ -50,58 +58,6 @@
             "editor": "Label",
             "name": "a",
             "rank": 0
-        },
-        "AGx": {
-            "caption": "Load ambulance routes",
-            "default_val": false,
-            "editor": "DynamicValue",
-            "name": "load_ambulance_routes",
-            "rank": 1,
-            "value": "boolean"
-        },
-        "AGy": {
-            "caption": "Ambulance table source",
-            "editor": "DynamicValue",
-            "is_list": true,
-            "name": "emergency_table",
-            "optional": true,
-            "rank": 2,
-            "value": "_any_thing"
-        },
-        "AHI": {
-            "caption": "Ambulance table type",
-            "editor": "custom_type",
-            "name": "ambulance_table_type",
-            "optional": true,
-            "rank": 3
-        },
-        "AHJ": {
-            "caption": "Name field",
-            "editor": "custom_field_AHI",
-            "name": "name_field",
-            "optional": true,
-            "rank": 4
-        },
-        "AHK": {
-            "caption": "Path field",
-            "editor": "custom_field_AHI",
-            "name": "path_field",
-            "optional": true,
-            "rank": 5
-        },
-        "AHL": {
-            "caption": "Location field",
-            "editor": "custom_field_AHI",
-            "name": "location_field",
-            "optional": true,
-            "rank": 6
-        },
-        "AHM": {
-            "caption": "Icon field",
-            "editor": "custom_field_AHI",
-            "name": "icon_field",
-            "optional": true,
-            "rank": 7
         }
     },
     "icon": "ion-android-map",
@@ -476,54 +432,53 @@
             "name": "here_route_distance_limit",
             "value": "number"
         },
-        "AGr": {
-            "caption": "debug_message",
+        "AHT": {
+            "caption": "Marker hovered ID",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
             },
-            "name": "debug_message",
+            "name": "marker_hovered_id",
             "value": "text"
         },
-        "AHB": {
-            "caption": "Ambulance location",
+        "AHV": {
+            "caption": "Marker hovered index",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
             },
-            "name": "ambulance_location",
+            "name": "marker_hovered_index",
+            "value": "number"
+        },
+        "AHd": {
+            "caption": "Marker unhovered ID",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "marker_unhovered_id",
             "value": "text"
         },
-        "AHE": {
-            "caption": "Ambulance name",
+        "AHe": {
+            "caption": "Marker unhovered index ",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
             },
-            "name": "ambulance_name",
-            "value": "text"
+            "name": "marker_unhovered_index",
+            "value": "number"
         },
-        "AHG": {
-            "caption": "Ambulance path",
+        "AHj": {
+            "caption": "Map clicked latitude",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
             },
-            "is_list": false,
-            "name": "ambulance_path",
-            "value": "text"
+            "name": "map_clicked_latitude",
+            "value": "number"
         },
-        "AHH": {
-            "caption": "Ambulance icon",
+        "AHk": {
+            "caption": "Map clicked longitude",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
             },
-            "name": "ambulance_icon",
-            "value": "text"
-        },
-        "AHN": {
-            "caption": "Ambulance is close",
-            "initialization_code": {
-                "fn": "function(properties, context) {\n\n\n\n}"
-            },
-            "name": "ambulance_is_close",
-            "value": "boolean"
+            "name": "map_clicked_longitude",
+            "value": "number"
         }
     }
 }

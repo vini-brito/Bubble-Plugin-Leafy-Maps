@@ -1,0 +1,63 @@
+{
+    "caption": "Show custom popup on marker",
+    "fields": {
+        "AHa": {
+            "caption": "Custom popup URL",
+            "doc": "Pass a URL of a page here, usually a page from your Bubble app, to be shown inside the popup. The must be responsive or fit in a very small screen size, since the popup is smaller than a normal device page. For example, without quotes, \"www.myapp.com/user\" or pass a parameter in the end of the URL \"https://myapp.io/stuff?id=doggo\" if you want to display a specific thing. The unique ID of something would also be good as the value of that URL parameter. If you leave this blank, \"Custom HTML\" will be used.",
+            "editor": "DynamicValue",
+            "name": "custom_popup_url",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        },
+        "AHb": {
+            "caption": "Custom popup height",
+            "doc": "In pixels. For example, without quotes, \"400\". This is the size of the window that your page will open in, so make sure your page looks good in this size. ",
+            "editor": "DynamicValue",
+            "name": "custom_popup_height",
+            "rank": 2,
+            "value": "text"
+        },
+        "AHc": {
+            "caption": "Custom popup width",
+            "doc": "In pixels. For example, without quotes, \"300\".This is the size of the window that your page will open in, so make sure your page looks good in this size.",
+            "editor": "DynamicValue",
+            "name": "custom_popup_width",
+            "rank": 3,
+            "value": "text"
+        },
+        "AHg": {
+            "caption": "Target marker unique ID",
+            "doc": "The ID of the marker you're targeting. Suggestion: the one on \"This Leafy Maps Marker clicked ID (or hovered marker ID)\" to show this popup on the marker that the user just clicked or is hovering.",
+            "editor": "DynamicValue",
+            "name": "target_marker_unique_id",
+            "rank": 4,
+            "value": "text"
+        },
+        "AHh": {
+            "caption": "In case you are using URL instead of HTML: Make sure your app settings about iframes is set to \"Same origin\". \"Allow all\" wil work, but everyone else on the internet will be able to display your pages in their apps and sites so it's not needed. \"Same origin\" makes only your app display your pages inside its pages.",
+            "editor": "Label",
+            "name": "make_sure_your_app_settings_about_iframes_is_set_to_\"same_origin\"._\"allow_all\"_wil_work,_but_everyone_else_on_the_internet_will_be_able_to_display_your_pages_in_their_apps_and_sites_so_it's_not_needed._\"same_origin\"_makes_only_your_app_display_your_pages_inside_its_pages.",
+            "rank": 5
+        },
+        "AHl": {
+            "caption": "Custom HTML",
+            "doc": "Any valid HTML here. Styles will be contained to within this popup through the use of an iframe. The field \"Custom popup URL\" must be empty for this one to be used.",
+            "editor": "DynamicValue",
+            "long_text": true,
+            "name": "custom_html",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "AHm": {
+            "caption": "Border width",
+            "default_val": 25,
+            "doc": "The size of the white frame surrounding the popup content, regardless of it being custom HTML or a Bubble page. You may want to make this smaller than the default (25) if you're using a dark theme inside the popup. Or any other reason I don't know. Use zero to completely eliminate it, but scrollbars may appear, so tinker with the values here until you're pleased.",
+            "editor": "DynamicValue",
+            "name": "border_width",
+            "rank": 6,
+            "value": "number"
+        }
+    }
+}

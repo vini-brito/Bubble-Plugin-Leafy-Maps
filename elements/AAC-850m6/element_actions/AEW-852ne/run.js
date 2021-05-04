@@ -8,21 +8,59 @@ function(instance, properties, context) {
 
     }
 
+    if (properties.clusterize_markers) {
+        //place this in instance data whenever I get to erase it
+        let options = {
+
+            zoomToBoundsOnClick: true,
+            showCoverageOnHover: true,
+            spiderfyOnMaxZoom: false,
+
+        };
+
+        instance.data[`markerCluster${properties.unique_name}`] = L.markerClusterGroup(options);
+
+    }
+
+
+
     // publishes the unique name of the marker when it's clicked and triggers the 'marker clicked workflow'
-    // if the unique marker name is not set then the 'marker clicked workflow' isn't triggered
     function markerClicked(e) {
 
-        if (properties.unique_name) {
-
-            // gets all numbers placed by my function, join them into a single string then convert to an actual number type
-            let numberOfThisIndex = Number(e.sourceTarget.options.listedMarkerUniqueName.match(/[0-9]/g).join(""));
+        // gets all numbers placed by my function, join them into a single string then convert to an actual number type
+        let numberOfThisIndex = Number(e.sourceTarget.options.listedMarkerUniqueName.match(/[0-9]/g).join(""));
 
 
-            instance.publishState("marker_clicked_id", e.sourceTarget.options.listedMarkerUniqueName);
-            instance.publishState("marker_clicked_index", numberOfThisIndex);
+        instance.publishState("marker_clicked_id", e.sourceTarget.options.listedMarkerUniqueName);
+        instance.publishState("marker_clicked_index", numberOfThisIndex);
 
-            instance.triggerEvent("marker_clicked");
-        }
+        instance.triggerEvent("marker_clicked");
+
+    }
+
+    function markerHovered(e) {
+
+        // gets all numbers placed by my function, join them into a single string then convert to an actual number type
+        let numberOfThisIndex = Number(e.sourceTarget.options.listedMarkerUniqueName.match(/[0-9]/g).join(""));
+
+        instance.publishState("marker_hovered_id", e.sourceTarget.options.listedMarkerUniqueName);
+        instance.publishState("marker_hovered_index", numberOfThisIndex);
+
+        instance.triggerEvent("marker_hovered");
+
+    }
+
+
+    function markerUnHovered(e) {
+
+        // gets all numbers placed by my function, join them into a single string then convert to an actual number type
+        let numberOfThisIndex = Number(e.sourceTarget.options.listedMarkerUniqueName.match(/[0-9]/g).join(""));
+
+        instance.publishState("marker_unhovered_id", e.sourceTarget.options.listedMarkerUniqueName);
+        instance.publishState("marker_unhovered_index", numberOfThisIndex);
+
+        instance.triggerEvent("marker_unhovered");
+
     }
 
     // this returns an array holding the list of texts (strings), booleans (yes/no) and integers (decimals and numbers)
@@ -61,6 +99,7 @@ function(instance, properties, context) {
     };
 
 
+
     const addEachMarker = (currentValue, index) => {
 
 
@@ -70,9 +109,17 @@ function(instance, properties, context) {
                 iconUrl: `https:${properties.custom_icon_url}`,
                 shadowUrl: `https:${properties.custom_icon_shadow_url}`,
             });
-            console.log(myIcon)
 
-            instance.data[`${namePurifiedFromNumbers}${index + 1}`] = L.marker([latitudes[index], longitudes[index]], { icon: myIcon, listedMarkerUniqueName: `${namePurifiedFromNumbers}${index + 1}` }).addTo(instance.data.mymap).bindPopup(popupTexts[index]).on('click', markerClicked).addTo(instance.data.mymap);
+            if (properties.clusterize_markers) {
+
+                instance.data[`${namePurifiedFromNumbers}${index + 1}`] = L.marker([latitudes[index], longitudes[index]], { icon: myIcon, listedMarkerUniqueName: `${namePurifiedFromNumbers}${index + 1}` }).addTo(instance.data[`markerCluster${properties.unique_name}`]).bindPopup(popupTexts[index]).on('click', markerClicked).on('mouseover', markerHovered).on('mouseout', markerUnHovered);
+
+
+            } else {
+
+                instance.data[`${namePurifiedFromNumbers}${index + 1}`] = L.marker([latitudes[index], longitudes[index]], { icon: myIcon, listedMarkerUniqueName: `${namePurifiedFromNumbers}${index + 1}` }).addTo(instance.data.mymap).bindPopup(popupTexts[index]).on('click', markerClicked).on('mouseover', markerHovered).on('mouseout', markerUnHovered);
+
+            }
 
         } else if (properties.popup_on_click && !properties.use_custom_icon) {
 
@@ -86,7 +133,15 @@ function(instance, properties, context) {
                 popupAnchor: [0, -30] // point from which the popup should open relative to the iconAnchor
             });
 
-            instance.data[`${namePurifiedFromNumbers}${index + 1}`] = L.marker([latitudes[index], longitudes[index]], { icon: myIcon, listedMarkerUniqueName: `${namePurifiedFromNumbers}${index + 1}` }).addTo(instance.data.mymap).bindPopup(popupTexts[index]).on('click', markerClicked).addTo(instance.data.mymap);
+            if (properties.clusterize_markers) {
+
+                instance.data[`${namePurifiedFromNumbers}${index + 1}`] = L.marker([latitudes[index], longitudes[index]], { icon: myIcon, listedMarkerUniqueName: `${namePurifiedFromNumbers}${index + 1}` }).addTo(instance.data[`markerCluster${properties.unique_name}`]).bindPopup(popupTexts[index]).on('click', markerClicked).on('mouseover', markerHovered).on('mouseout', markerUnHovered);
+
+            } else {
+
+                instance.data[`${namePurifiedFromNumbers}${index + 1}`] = L.marker([latitudes[index], longitudes[index]], { icon: myIcon, listedMarkerUniqueName: `${namePurifiedFromNumbers}${index + 1}` }).addTo(instance.data.mymap).bindPopup(popupTexts[index]).on('click', markerClicked).on('mouseover', markerHovered).on('mouseout', markerUnHovered);
+
+            }
 
         } else if (!properties.popup_on_click && properties.use_custom_icon) {
 
@@ -95,7 +150,16 @@ function(instance, properties, context) {
                 shadowUrl: `https:${properties.custom_icon_shadow_url}`,
             });
 
-            instance.data[`${namePurifiedFromNumbers}${index + 1}`] = L.marker([latitudes[index], longitudes[index]], { icon: myIcon, listedMarkerUniqueName: `${namePurifiedFromNumbers}${index + 1}` }).addTo(instance.data.mymap).on('click', markerClicked).addTo(instance.data.mymap);
+
+            if (properties.clusterize_markers) {
+
+                instance.data[`${namePurifiedFromNumbers}${index + 1}`] = L.marker([latitudes[index], longitudes[index]], { icon: myIcon, listedMarkerUniqueName: `${namePurifiedFromNumbers}${index + 1}` }).addTo(instance.data[`markerCluster${properties.unique_name}`]).on('click', markerClicked).on('mouseover', markerHovered).on('mouseout', markerUnHovered);
+
+            } else {
+
+                instance.data[`${namePurifiedFromNumbers}${index + 1}`] = L.marker([latitudes[index], longitudes[index]], { icon: myIcon, listedMarkerUniqueName: `${namePurifiedFromNumbers}${index + 1}` }).addTo(instance.data.mymap).on('click', markerClicked).on('mouseover', markerHovered).on('mouseout', markerUnHovered);
+
+            }
 
         } else if (!properties.popup_on_click && !properties.use_custom_icon) {
 
@@ -109,7 +173,15 @@ function(instance, properties, context) {
                 popupAnchor: [0, -30] // point from which the popup should open relative to the iconAnchor
             });
 
-            instance.data[`${namePurifiedFromNumbers}${index + 1}`] = L.marker([latitudes[index], longitudes[index]], { icon: myIcon, listedMarkerUniqueName: `${namePurifiedFromNumbers}${index + 1}` }).addTo(instance.data.mymap).on('click', markerClicked).addTo(instance.data.mymap);
+            if (properties.clusterize_markers) {
+
+                instance.data[`${namePurifiedFromNumbers}${index + 1}`] = L.marker([latitudes[index], longitudes[index]], { icon: myIcon, listedMarkerUniqueName: `${namePurifiedFromNumbers}${index + 1}` }).addTo(instance.data[`markerCluster${properties.unique_name}`]).on('click', markerClicked).on('mouseover', markerHovered).on('mouseout', markerUnHovered);
+
+            } else {
+
+                instance.data[`${namePurifiedFromNumbers}${index + 1}`] = L.marker([latitudes[index], longitudes[index]], { icon: myIcon, listedMarkerUniqueName: `${namePurifiedFromNumbers}${index + 1}` }).addTo(instance.data.mymap).on('click', markerClicked).on('mouseover', markerHovered).on('mouseout', markerUnHovered);
+
+            }
 
         }
 
@@ -121,8 +193,11 @@ function(instance, properties, context) {
 
 
 
+    if (properties.clusterize_markers) {
 
+        instance.data[`markerCluster${properties.unique_name}`].addTo(instance.data.mymap)
 
+    }
 
 
 }

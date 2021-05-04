@@ -67,7 +67,7 @@
             "caption": "Congratulations fellow Bubbler! You've just attained more power by installing this plugin. Come visit your custom plugin shop www.unlimitedbubbling.dev and get even more!",
             "editor": "Label",
             "name": "ss",
-            "rank": 15
+            "rank": 16
         },
         "ADl": {
             "caption": "Enable Drawing",
@@ -122,6 +122,15 @@
             "name": "border_radius",
             "rank": 14,
             "value": "number"
+        },
+        "AHS": {
+            "caption": "Mouse wheel zoom",
+            "default_val": true,
+            "doc": "If set to no, the user will not be able to use the mouse wheel to zoom in and zoom out.",
+            "editor": "DynamicValue",
+            "name": "mouse_wheel_zoom",
+            "rank": 15,
+            "value": "boolean"
         }
     }
 }

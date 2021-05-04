@@ -19,7 +19,7 @@
         },
         "AAe": {
             "caption": "Popup text",
-            "doc": "Text to be displayed in this marker's popup.",
+            "doc": "Text to be displayed in this marker's popup. Supports limited HTML styling, for example <b>, <i> and other tags without properties. If you want to display a custom HTML then you must use the \"Show custom popup\" workflow action. That other action supports advanced HTML and can even display Bubble pages on it.",
             "editor": "DynamicValue",
             "is_list": false,
             "name": "popup_text",
