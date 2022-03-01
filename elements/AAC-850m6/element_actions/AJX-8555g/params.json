@@ -1,0 +1,19 @@
+{
+    "caption": "Create container to get coordinate from address from Mapbox",
+    "fields": {
+        "AJd": {
+            "caption": "This specific workflow action uses Geocoding from Mapbox. You may only use responses from the Mapbox Geocoding API in conjunction with a Mapbox map. It is their policy. If you need something else, another geocoding vendor can be implemented for you, get in touch with me (plugin maker).",
+            "editor": "Label",
+            "name": "_you_may_only_use_responses_from_the_geocoding_api_in_conjunction_with_a_mapbox_map._it_is_their_policy._if_you_need_something_else,_it_can_be_custom_created_for_you.",
+            "rank": 1
+        },
+        "AJi": {
+            "caption": "Query container ID",
+            "doc": "Create a normal group in the page and give it an ID, then write this ID here. It will become the input where the user will type the address.",
+            "editor": "DynamicValue",
+            "name": "query_container",
+            "rank": 0,
+            "value": "text"
+        }
+    }
+}

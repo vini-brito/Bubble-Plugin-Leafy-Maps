@@ -1,5 +1,6 @@
 {
     "caption": "Add marker on",
+    "doc": "",
     "fields": {
         "AAL": {
             "caption": "Latitude",
@@ -30,13 +31,14 @@
         "AAg": {
             "caption": "Use custom icon?",
             "default_val": false,
-            "doc": "Allows you to upload your own .png image to be used as an icon or marker instead of the default marker. You can optionally upload a .png image to be the icon shadow if you want to, but it's not necessary.",
+            "doc": "Allows you to upload your own .png image to be used as an icon or marker instead of the default marker. You can optionally upload a .png image to be the icon shadow if you want to, but it's not necessary.  Only use Icons for custom markers with aspect ratio 1:1, that is, images that are squared, otherwise the images will be distorted.",
             "editor": "Checkbox",
             "name": "use_custom_icon",
             "rank": 5
         },
         "AAh": {
             "caption": "Custom icon",
+            "doc": "",
             "editor": "DynamicValue",
             "name": "custom_icon_url",
             "optional": true,
@@ -69,7 +71,7 @@
         },
         "ACb": {
             "caption": "Unique name",
-            "doc": "A unique name to this marker, so you can perform actions on it later on by refering to its name. Also, when it's clicked you'll see its name on the map element field called Marker Clicked ID. If you leave this blank then no action will be performed on it when clicked.",
+            "doc": "A unique name to this marker, so you can perform actions on it later on by refering to its name. Also, when it's clicked you'll see its name on the map element field called Marker Clicked ID. If you leave this blank then no action will be performed on it when clicked,",
             "editor": "DynamicValue",
             "name": "marker_name",
             "rank": 8,

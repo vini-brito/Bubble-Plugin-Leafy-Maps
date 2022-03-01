@@ -1,0 +1,14 @@
+{
+    "caption": "Delete vertex",
+    "doc": "This action delete vertex when drawing.",
+    "fields": {
+        "AIM": {
+            "caption": "All",
+            "default_val": false,
+            "editor": "DynamicValue",
+            "name": "all",
+            "rank": 0,
+            "value": "boolean"
+        }
+    }
+}

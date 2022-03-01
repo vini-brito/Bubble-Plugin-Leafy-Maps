@@ -93,6 +93,33 @@ function(instance, properties, context) {
         // instance.data.actions.loadMap();
     }
 
+
+    if (properties.tile_provider === "MapTiler") {
+
+        let tileName = properties.maptiler_tile.toLowerCase().trim();
+
+        var gl = L.mapboxGL({
+            attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
+            style: `https://api.maptiler.com/maps/${tileName}/style.json?key=${context.keys[`Maptiler access token`]}`
+        }).addTo(instance.data.mymap);
+
+        if (properties.display_maptiler_logo === true) {
+
+            let holderDiv = document.createElement("div");
+
+            holderDiv.innerHTML = `<a href="https://www.maptiler.com" style="position:absolute; left:10px; bottom:10px; z-index:999;">
+            <img src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo">
+            </a>`;
+
+            let mapElement = document.getElementById(mapid);
+            mapElement.appendChild(holderDiv);
+            
+
+        }
+
+
+    }
+
     const userLocated = (e) => {
 
         // publishes the data passed by the locate event to the Element states.
@@ -124,187 +151,9 @@ function(instance, properties, context) {
     instance.data.mymap.on('locationerror', onLocationError);
 
 
-    //========Polygon Drawing Events==========
-
-    let mode = "grab";
-    let latLongs = []; //latitude, longitude used to draw line and polygon.
-    let drawedObjects = [];
-
-
-    let totalDistance = { value: 0 };
-    let distancePanel = instance.data.draw_city ? $('') : $(`<div style="display:none;" class="distance-panel">Total distance: 0m</div>`);
-
-    const flushDrawingData = () => {
-        // console.log('flush data detector')
-        latLongs = [];
-        drawedObjects = [];
-        totalDistance = { value: 0 };
-    };
-
-    const getKeyNumber = function (event) {
-        // console.log('get key number detector' + event.keyCode)
-        if (window.event) {
-            return event.keyCode;
-        } else if (event.which) {
-            return event.which;
-        }
-        return -1;
-    };
-
-    const distanceToText = instance.data.distanceToText;
-    const getLineAngle = instance.data.getLineAngle;
-    const drawText = instance.data.drawText;
-    const drawLine = instance.data.drawLine;
-    const drawCircle = instance.data.drawCircle;
-    const drawPolygon = instance.data.drawPolygon;
-    const squareMeter2squareKilometer = instance.data.squareMeter2squareKilometer;
-    const meterToKilometer = instance.data.meterToKilometer;
-    const cursorUrl = 'https://dd7tel2830j4w.cloudfront.net/f1591364526380x334180475752705800/pencil.png';
-
-    instance.data.enable_drawing = properties.enable_drawing;
-
-    const keydown = {
-        //CONTROL LEFT
-        17: !IS_MAC ? () => {
-            if (!instance.data.enable_drawing) return;
-
-            mode = "draw";
-            instance.canvas.css({ 'cursor': `url(${cursorUrl}), auto` });
-        } : undefined,
-        91: IS_MAC ? () => {
-            if (!instance.data.enable_drawing) return;
-
-            mode = "draw";
-            instance.canvas.css({ 'cursor': `url(${cursorUrl}), auto` });
-        } : undefined,
-        //Enter
-        13: () => {
-            if (mode !== "draw") return;
-
-            instance.data.drawing = true;
-            if (latLongs.length > 2) {
-                let polygon = drawPolygon(latLongs);
-                let areaInSquareMeters = L.GeometryUtil.geodesicArea(polygon.getLatLngs()[0]);
-                let areaText = distanceToText(areaInSquareMeters, 2);
-                let currentObject = drawLine([latLongs[0], latLongs[latLongs.length - 1]]);
-
-                currentObject.lineDistance = mymap.distance(latLongs[0], latLongs[latLongs.length - 1]);
-                currentObject.totalLineDistance = totalDistance.value + currentObject.lineDistance;
-                currentObject.totalDistance = totalDistance;
-                totalDistance.value = currentObject.totalLineDistance;
-
-                polygon.bringToBack();
-                if (instance.data.show_distance) {
-                    polygon.bindTooltip(areaText, {
-                        permanent: true, direction: 'center', className: 'tooltipText'
-                    });
-                }
-
-                flushDrawingData();
-                keydown[46]();
-            }
-        },
-        //Delete
-        46: () => {
-            if (mode !== "draw") return;
-            drawedObjects.forEach((element) => {
-                element.remove();
-            });
-
-            instance.data.drawing = false;
-            distancePanel.html(`Total distance: ${0}m`);
-            distancePanel.css('display', 'none');
-            flushDrawingData();
-        }
-    };
-
-    $(window).on("keydown", event => {
-        let keyNumber = getKeyNumber(event);
-
-        if (typeof keydown[keyNumber] === "function") {
-            keydown[keyNumber]();
-        }
-
-    });
-
-    $(window).on("keyup", event => {
-        let key = getKeyNumber(event);
-        if (key == 17) {
-            mode = "grab";
-            instance.canvas.css('cursor', ``);
-        }
-    });
-
-    //   const changeThisScope = (newvalue) => {
-    //     latLongs.push(newvalue);
-    //   }
-
-
-    mymap.on('click', (info) => {
-        //   console.log(mode);
-        console.log(info);
-        if (mode == "draw" || instance.data.DRAW_TOGGLE) {
-            if (instance.data.style.show_distance) {
-                distancePanel.css('display', 'block');
-            }
-
-            instance.data.drawing = true;
-            let currentPoint = [info.latlng.lat, info.latlng.lng];
-            let lastPoint = latLongs[latLongs.length - 1];
-            let mousexy = [info.layerPoint.x, info.layerPoint.y];
-            let lastObject = drawedObjects[drawedObjects.length - 1];
-            let lastTooltip = (lastObject || {}).textElement;
-            let currentObject;
-            let totalDistanceText = "";
-            console.log(lastObject);
-            instance.data.SAVED_POLYLINE.push(currentPoint);
-            if (instance.data.draw_city) {
-                console.log(latLongs, 'latlongs')
-            }
-            // console.log(latLongs, latLongs.length, info)
-            if (latLongs.length > 0) {
-                currentObject = drawLine([lastPoint, currentPoint]);
-                currentObject.lineDistance = mymap.distance(lastPoint, currentPoint);
-                currentObject.totalLineDistance = totalDistance.value + currentObject.lineDistance;
-                currentObject.totalDistance = totalDistance;
-
-                totalDistance.value = currentObject.totalLineDistance;
-
-                if (!instance.data.draw_city) distancePanel.html(`Total distance: ${distanceToText(totalDistance.value)}`);
-            } else {
-                currentObject = drawCircle(currentPoint, 0.1);
-            }
-
-            drawedObjects.push(currentObject);
-            latLongs.push(currentPoint);
-
-        }
-    });
-
-    //   let safari_quickfix = ;
-    $(window).on('contextmenu', () => {
-        // console.log('triggered context menu')
-        if ((mode == "draw" || instance.data.DRAW_TOGGLE) && drawedObjects.length > 0) {
-            latLongs.pop();
-            drawedObjects.pop().remove();
-
-            let currentObject = drawedObjects[drawedObjects.length - 1];
-            let currentPoint = latLongs[latLongs.length - 1];
-            let totalDistanceText = "";
-            let lastPoint = latLongs[latLongs.length - 2];
-
-            totalDistance.value = (currentObject || {}).totalLineDistance || 0;
-            distancePanel.html(`Total distance: ${distanceToText(totalDistance.value)}`);
-
-            if (latLongs.length <= 0) {
-                instance.data.drawing = false;
-                distancePanel.css('display', 'none');
-            }
-        }
-    });
-
-    instance.data.distancePanel = distancePanel;
-    instance.canvas.append(distancePanel);
+    if (properties.enable_drawing) {
+        setDrawingControls(instance, instance.data.mymap, instance.data.style);
+    }
 
 
     //HERE API UPGRADE CODE
@@ -534,6 +383,7 @@ function(instance, properties, context) {
         addMarkerOnClick(name) {
             this.targetRoute = name
             this.changeRoute = true
+
         }
 
         removeMarkerOnClick(name) {
@@ -1623,24 +1473,45 @@ function(instance, properties, context) {
         }
     }
 
-    instance.data.actions.loadMap()
-
+    instance.data.actions.loadMap();
     if (!properties.mouse_wheel_zoom) {
-
         instance.data.mymap.scrollWheelZoom.disable();
+    }
+
+    //  function mapClicked(e) { 
+    //
+    //     instance.publishState("map_clicked_latitude", e.latlng.lat)
+    //    instance.publishState("map_clicked_longitude", e.latlng.lng)
+
+    //	instance.triggerEvent('map_clicked');
+
+    //} 
+    // instance.data.mymap.on('click', mapClicked)
+
+
+
+    // Right/ Left Click functionality implemented starting here
+
+    if (properties.mouse_button === "right") {
+        instance.data.mymap.on("contextmenu", (ev) => {
+            if (instance.data.mode !== "default") return;
+            instance.publishState("click_map_coordinates_latitude", ev.latlng.lat)
+            instance.publishState("click_map_coordinates_longitude", ev.latlng.lng)
+            instance.triggerEvent("map_clicked");
+        });
 
     }
 
-    function mapClicked(e) { 
-
-        instance.publishState("map_clicked_latitude", e.latlng.lat)
-        instance.publishState("map_clicked_longitude", e.latlng.lng)
-
-		instance.triggerEvent('map_clicked');
-
+    if (properties.mouse_button === "left") {
+        instance.data.mymap.on("click", (ev) => {
+            if (instance.data.mode !== "default") return;
+            instance.publishState("click_map_coordinates_Latitude", ev.latlng.lat)
+            instance.publishState("click_map_coordinates_longitude", ev.latlng.lng)
+            instance.triggerEvent("map_clicked");
+        });
     }
-    
 
-    instance.data.mymap.on('click', mapClicked)
+
+
 
 }

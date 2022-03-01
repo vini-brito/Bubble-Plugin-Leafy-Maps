@@ -36,7 +36,7 @@
             "name": "route_limit_exceeded"
         },
         "AGl": {
-            "caption": "no route was found",
+            "caption": "No route was found",
             "name": "no_route_was_found"
         },
         "AHU": {
@@ -50,6 +50,18 @@
         "AHi": {
             "caption": "Marker unhovered",
             "name": "marker_unhovered"
+        },
+        "AIy": {
+            "caption": "User's location is inside area",
+            "name": "user_location_is_inside_area"
+        },
+        "AIz": {
+            "caption": "When user's location is outside  area",
+            "name": "user_location_is_outside_area"
+        },
+        "AJa": {
+            "caption": "Coordinates from address attained from Mapbox",
+            "name": "coordinates_from_address_attained_from_mapbox"
         }
     },
     "fields": {
@@ -102,7 +114,7 @@
             "value": "number"
         },
         "ACt": {
-            "caption": "Boundary Northeast Lat",
+            "caption": "Boundary northeast lat",
             "doc": "Geographical bounds of the area user is located in (with respect to the accuracy of location).",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
@@ -111,7 +123,7 @@
             "value": "number"
         },
         "ACu": {
-            "caption": "Boundary Northeast Lng",
+            "caption": "Boundary northeast lng",
             "doc": "Geographical bounds of the area user is located in (with respect to the accuracy of location).",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
@@ -120,7 +132,7 @@
             "value": "number"
         },
         "ACv": {
-            "caption": "Boundary Southwest Lat",
+            "caption": "Boundary southwest lat",
             "doc": "Geographical bounds of the area user is located in (with respect to the accuracy of location).",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
@@ -129,7 +141,7 @@
             "value": "number"
         },
         "ACw": {
-            "caption": "Boundary Southwest Lng",
+            "caption": "Boundary southwest lng",
             "doc": "Geographical bounds of the area user is located in (with respect to the accuracy of location).",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
@@ -192,7 +204,7 @@
             "value": "number"
         },
         "ADJ": {
-            "caption": "Center's Latitude",
+            "caption": "Center's latitude",
             "doc": "The map center latitude",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
@@ -201,7 +213,7 @@
             "value": "number"
         },
         "ADK": {
-            "caption": "Center's Longitude",
+            "caption": "Center's longitude",
             "doc": "The map center longitude",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
@@ -210,7 +222,7 @@
             "value": "number"
         },
         "ADL": {
-            "caption": "Marker Clicked ID",
+            "caption": "Marker clicked id",
             "doc": "Current clicked marker ID (unique name)",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
@@ -246,7 +258,7 @@
             "value": "number"
         },
         "ADa": {
-            "caption": "Is Being Tracked",
+            "caption": "Is being tracked",
             "doc": "When tracking a user the value is yes, otherwise it's empty",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
@@ -255,7 +267,7 @@
             "value": "boolean"
         },
         "ADd": {
-            "caption": "Polygons List",
+            "caption": "Polygons list",
             "doc": "A list of all polygons inside the map.",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
@@ -375,6 +387,7 @@
         },
         "AGX": {
             "caption": "HERE route travel time",
+            "doc": "",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
             },
@@ -433,7 +446,7 @@
             "value": "number"
         },
         "AHT": {
-            "caption": "Marker hovered ID",
+            "caption": "Marker hovered id",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
             },
@@ -449,7 +462,7 @@
             "value": "number"
         },
         "AHd": {
-            "caption": "Marker unhovered ID",
+            "caption": "Marker unhovered id",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
             },
@@ -479,6 +492,71 @@
             },
             "name": "map_clicked_longitude",
             "value": "number"
+        },
+        "AIx": {
+            "caption": "Is the point contained in the polygon?",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "point_is_contained_polygon",
+            "value": "boolean"
+        },
+        "AJE": {
+            "caption": "Clicked map coordinates Latitude",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "click_map_coordinates_latitude",
+            "value": "number"
+        },
+        "AJF": {
+            "caption": "Clicked map coordinates longitude",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "click_map_coordinates_longitude",
+            "value": "number"
+        },
+        "AJY": {
+            "caption": "Geocoded longitude from Mapbox",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "geocoded_longitude_mapbox",
+            "value": "number"
+        },
+        "AJZ": {
+            "caption": "Geocoded latitude from Mapbox",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "geocoded_latitude_mapbox",
+            "value": "number"
+        },
+        "AJb": {
+            "caption": "Geocoded full name from Mapbox",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "geocoded_full_name_mapbox",
+            "value": "text"
+        },
+        "AJc": {
+            "caption": "Geocoded short name from Mapbox",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "geocoded_short_name_mapbox",
+            "value": "text"
+        },
+        "AJe": {
+            "caption": "Which zone is the point contained in?",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": false,
+            "name": "which_zone_is_the_point_contained_in",
+            "value": "text"
         }
     }
 }

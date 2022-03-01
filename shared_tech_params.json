@@ -47,6 +47,18 @@
         "AEk": {
             "name": "new leaflet",
             "url": "//dd7tel2830j4w.cloudfront.net/f1600950880742x923580300813200400/leaflet.js"
+        },
+        "AJB": {
+            "name": "delete cursor",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1633479047441x275536831844399580/delete.png"
+        },
+        "AJW": {
+            "name": "drawing-lib",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1638203702359x224817964230026300/drawing-lib.js"
+        },
+        "AJh": {
+            "name": "usefulfunctions",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1640191632473x564774773206991200/usefulFunctions.js"
         }
     },
     "dependencies": {
@@ -63,6 +75,10 @@
         },
         "AEn": {
             "caption": "Here access token",
+            "type": "client_safe"
+        },
+        "AJl": {
+            "caption": "Maptiler access token",
             "type": "client_safe"
         }
     }

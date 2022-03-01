@@ -8,6 +8,4 @@ instance.publishState("calculated_distance", calculatedDistance)
 //Returns the distance between two geographical coordinates according to the map's CRS. By default this measures distance in meters
 
 
-
-
 }

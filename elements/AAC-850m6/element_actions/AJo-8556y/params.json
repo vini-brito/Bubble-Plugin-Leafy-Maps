@@ -1,0 +1,40 @@
+{
+    "caption": "Change marker icon",
+    "fields": {
+        "AJp": {
+            "caption": "Unique name",
+            "doc": "The unique name of the marker that you want to change its icon.",
+            "editor": "DynamicValue",
+            "name": "marker_name",
+            "rank": 0,
+            "value": "text"
+        },
+        "AJq": {
+            "caption": "Marker style",
+            "default_val": "Red",
+            "editor": "Dropdown",
+            "name": "marker_style",
+            "options": "Blue,Yellow,Green,Red,Brown,White,Black",
+            "rank": 1
+        },
+        "AJr": {
+            "caption": "Use custom icon?",
+            "default_val": false,
+            "doc": "Allows you to upload your own .png image to be used as an icon or marker instead of the default marker. You can optionally upload a .png image to be the icon shadow if you want to, but it's not necessary.  Only use Icons for custom markers with aspect ratio 1:1, that is, images that are squared, otherwise the images will be distorted.",
+            "editor": "DynamicValue",
+            "name": "use_custom_icon",
+            "optional": false,
+            "rank": 2,
+            "value": "boolean"
+        },
+        "AJs": {
+            "caption": "Custom icon image",
+            "doc": "Your own .png image to be used as an icon or marker instead of the default marker. You can optionally upload a .png image to be the icon shadow if you want to, but it's not necessary.  Only use Icons for custom markers with aspect ratio 1:1, that is, images that are squared, otherwise the image will be distorted.",
+            "editor": "DynamicValue",
+            "name": "custom_icon_url",
+            "optional": true,
+            "rank": 3,
+            "value": "image"
+        }
+    }
+}

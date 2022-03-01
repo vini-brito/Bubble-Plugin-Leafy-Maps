@@ -1,0 +1,44 @@
+{
+    "caption": "Draw list of polygons",
+    "doc": "Loads polygons based on data on bubble database with the coordinates in the order \"\"latitude - longitude\"]",
+    "fields": {
+        "AIr": {
+            "caption": "Thing type",
+            "doc": "type of data in bubble  that are used to load Longitude and latitude to render polygons.",
+            "editor": "custom_type",
+            "name": "thing_type",
+            "rank": 0
+        },
+        "AIt": {
+            "caption": "Data source",
+            "doc": "Origin of the data that will be used on polygon redering ",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "data_source",
+            "rank": 1,
+            "value": "custom_data_AIr"
+        },
+        "AIu": {
+            "caption": "Latitude",
+            "doc": "The list of latitudes that will compose the polygon",
+            "editor": "custom_field_AIr",
+            "name": "latitude",
+            "rank": 2
+        },
+        "AIv": {
+            "caption": "Longitude",
+            "doc": "The list of Longitudes that will compose the polygon",
+            "editor": "custom_field_AIr",
+            "name": "longitude",
+            "rank": 3
+        },
+        "AIw": {
+            "caption": "Unique name",
+            "doc": "A unique name to identify the elements of a polygon set",
+            "editor": "DynamicValue",
+            "name": "polygon_class_name",
+            "rank": 4,
+            "value": "text"
+        }
+    }
+}

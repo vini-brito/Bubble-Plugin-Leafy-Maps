@@ -1,8 +1,4 @@
 function(instance, properties, context) {
-
-
- instance.data.mymap.remove()
-
-
-
+    instance.data.mymap.remove()
+    
 }

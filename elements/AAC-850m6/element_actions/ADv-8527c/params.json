@@ -1,74 +1,75 @@
 {
-    "caption": "Set Drawing Style",
+    "caption": "Set drawing style",
+    "doc": "This action change the drawing style.",
     "fields": {
         "ADw": {
             "caption": "Stroke",
             "default_val": true,
             "editor": "DynamicValue",
-            "name": "draw_stroke",
+            "name": "stroke",
             "optional": true,
             "rank": 0,
             "value": "boolean"
         },
         "ADx": {
-            "caption": "Stroke Color",
+            "caption": "Stroke color",
             "editor": "Color",
-            "name": "stroke_color",
+            "name": "color",
             "optional": true,
             "rank": 1
         },
         "ADy": {
-            "caption": "Stroke Weight",
+            "caption": "Stroke weight",
             "editor": "DynamicValue",
-            "name": "stroke_weight",
+            "name": "weight",
             "optional": true,
             "rank": 2,
             "value": "number"
         },
         "ADz": {
-            "caption": "Stroke Opacity",
+            "caption": "Stroke opacity",
             "editor": "DynamicValue",
-            "name": "stroke_opacity",
+            "name": "opacity",
             "optional": true,
             "rank": 3,
             "value": "number"
         },
         "AEA": {
-            "caption": "Line Cap",
+            "caption": "Line cap",
             "editor": "Dropdown",
-            "name": "line_cap",
+            "name": "lineCap",
             "optional": true,
             "options": "butt,round,square",
             "rank": 4
         },
         "AEB": {
-            "caption": "Line Join",
+            "caption": "Line join",
             "editor": "Dropdown",
-            "name": "line_join",
+            "name": "lineJoin",
             "optional": true,
             "options": "miter,round,bevel",
             "rank": 5
         },
         "AEC": {
-            "caption": "Polygon Fill",
+            "caption": "Polygon fill",
             "default_val": true,
             "editor": "DynamicValue",
-            "name": "polygon_fill",
+            "name": "fill",
             "optional": true,
             "rank": 6,
             "value": "boolean"
         },
         "AED": {
-            "caption": "Fill Color",
+            "caption": "Fill color",
             "editor": "Color",
-            "name": "fill_color",
+            "name": "fillColor",
             "optional": true,
             "rank": 7
         },
         "AEE": {
-            "caption": "Fill Opacity",
+            "caption": "Fill opacity",
             "editor": "DynamicValue",
-            "name": "fill_opacity",
+            "name": "fillOpacity",
             "optional": true,
             "rank": 8,
             "value": "number"

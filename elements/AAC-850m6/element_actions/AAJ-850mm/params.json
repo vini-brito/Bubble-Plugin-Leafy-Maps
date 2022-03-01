@@ -43,7 +43,7 @@
             "doc": "Choose one and use the options that concern to this provider below. Everything in the other options will be ignored.",
             "editor": "Dropdown",
             "name": "tile_provider",
-            "options": "Mapbox,Stadia,Here",
+            "options": "Mapbox,Stadia,Here,MapTiler",
             "rank": 1
         },
         "AAv": {
@@ -67,20 +67,19 @@
             "caption": "Congratulations fellow Bubbler! You've just attained more power by installing this plugin. Come visit your custom plugin shop www.unlimitedbubbling.dev and get even more!",
             "editor": "Label",
             "name": "ss",
-            "rank": 16
+            "rank": 20
         },
         "ADl": {
-            "caption": "Enable Drawing",
+            "caption": "Enable drawing",
             "default_val": true,
             "doc": "It enables the user to draw polygons on the map, it also enables measuring distances.",
             "editor": "DynamicValue",
             "name": "enable_drawing",
-            "rank": 9,
+            "rank": 19,
             "value": "boolean"
         },
         "AEm": {
             "caption": "Here tile",
-            "default_val": "normal day",
             "doc": "",
             "editor": "Dropdown",
             "name": "here_tile",
@@ -89,38 +88,40 @@
             "rank": 8
         },
         "AGm": {
-            "caption": "HERE Tooltip style",
+            "caption": "HERE tooltip style",
             "editor": "Label",
             "name": "here_tooltip",
-            "rank": 10
+            "rank": 9
         },
         "AGn": {
-            "caption": "Font color",
+            "caption": "HERE Font color",
             "default_val": "rgba(17, 59, 122, 1)",
             "editor": "Color",
             "name": "tp_color",
-            "rank": 11
+            "rank": 10
         },
         "AGo": {
-            "caption": "Background color",
+            "caption": "HERE Background color",
             "default_val": "rgba(230, 230, 230, 1)",
+            "doc": "",
             "editor": "Color",
             "name": "tp_bg",
-            "rank": 12
+            "rank": 11
         },
         "AGp": {
-            "caption": "Border color",
+            "caption": "HERE Border color",
             "default_val": "rgba(230, 230, 230, 0.75)",
             "editor": "Color",
             "name": "border_color",
-            "rank": 13
+            "rank": 12
         },
         "AGq": {
-            "caption": "Border radius",
-            "default_val": 4,
+            "caption": "HERE Border radius",
+            "doc": "Example: 4",
             "editor": "DynamicValue",
             "name": "border_radius",
-            "rank": 14,
+            "optional": true,
+            "rank": 13,
             "value": "number"
         },
         "AHS": {
@@ -129,6 +130,41 @@
             "doc": "If set to no, the user will not be able to use the mouse wheel to zoom in and zoom out.",
             "editor": "DynamicValue",
             "name": "mouse_wheel_zoom",
+            "rank": 17,
+            "value": "boolean"
+        },
+        "AJD": {
+            "caption": "Mouse button for click event",
+            "default_val": "right",
+            "doc": "Choose what mouse button will trigger the click event.",
+            "editor": "Dropdown",
+            "name": "mouse_button",
+            "optional": true,
+            "options": "left,right",
+            "rank": 18
+        },
+        "AJj": {
+            "caption": "General options",
+            "editor": "Label",
+            "name": "general_options",
+            "rank": 16
+        },
+        "AJm": {
+            "caption": "MapTiler tile",
+            "doc": "Write here the name of the tile you want, exactly as written in this description. Options for tiles: basic, bright, osm-standard, outdoor, pastel, hybrid, streets, toner, topo, topographique, voyager, winter. You can visit your MapTiler dashboard to see them (https://cloud.maptiler.com/maps/) or just test them here by writing the name and seeing what comes up.  You can also use custom maps by pasting the ID of the custom map here, example is 52e243ac-e676-45cb-8589-2b6e74f2cb10, get that from your dashboard, this text will be inside the URL of the page and also inside an input box once you click on your custom map there. Of course you have to create your custom map in your dashboard first by clicking the blue \"NEW MAP\" button there.  And this provider is set here to only use vector maps.   On the free plan you must show the MapTiler logo on the map, enable or disable that in the option below.",
+            "editor": "DynamicValue",
+            "name": "maptiler_tile",
+            "optional": true,
+            "rank": 14,
+            "value": "text"
+        },
+        "AJn": {
+            "caption": "Display MapTiler logo",
+            "default_val": false,
+            "doc": "You are required to display MapTiler's logo if you are on their free plan as explained in their pricing page.",
+            "editor": "DynamicValue",
+            "name": "display_maptiler_logo",
+            "optional": true,
             "rank": 15,
             "value": "boolean"
         }

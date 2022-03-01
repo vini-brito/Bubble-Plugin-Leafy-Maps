@@ -1,5 +1,5 @@
 {
-    "caption": "Create Stadia route request",
+    "caption": "Create stadia route request",
     "fields": {
         "ACK": {
             "caption": "List of latitudes",

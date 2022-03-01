@@ -1,0 +1,28 @@
+{
+    "caption": "Check if point is contained in polygon area (geofence)",
+    "doc": "Verifies on interval of 2 seconds if any point is inside of any polygon",
+    "fields": {
+        "AIl": {
+            "caption": "Is the point contained in the Polygon? returns yes or no. Useful for geofence related features.",
+            "editor": "Label",
+            "name": "will_return_a_boolean_(yes/no)_type_on_this_map_element's_state_polygon.",
+            "rank": 0
+        },
+        "AIm": {
+            "caption": "Latitude",
+            "doc": "Latitude  where the  point to be checked are",
+            "editor": "DynamicValue",
+            "name": "point_latitude",
+            "rank": 1,
+            "value": "number"
+        },
+        "AIn": {
+            "caption": "Longitude",
+            "doc": "Longitude where the  point to be checked are",
+            "editor": "DynamicValue",
+            "name": "point_longitude",
+            "rank": 2,
+            "value": "number"
+        }
+    }
+}

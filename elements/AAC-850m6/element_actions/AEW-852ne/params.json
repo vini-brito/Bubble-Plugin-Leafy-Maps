@@ -49,8 +49,8 @@
         "AEc": {
             "caption": "Use custom icon?",
             "default_val": false,
-            "doc": "Allows you to upload your own .png image to be used as an icon or marker instead of the default marker. You can optionally upload a .png image to be the icon shadow if you want to, but it's not necessary.",
-            "editor": "DynamicValue",
+            "doc": "Allows you to upload your own .png image to be used as an icon or marker instead of the default marker. You can optionally upload a .png image to be the icon shadow if you want to, but it's not necessary.  Only use Icons for custom markers with aspect ratio 1:1, that is, images that are squared, otherwise the images will be distorted.",
+            "editor": "Checkbox",
             "name": "use_custom_icon",
             "optional": true,
             "rank": 5,

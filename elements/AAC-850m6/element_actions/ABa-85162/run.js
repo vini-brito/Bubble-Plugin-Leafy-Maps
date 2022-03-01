@@ -45,7 +45,7 @@ function(instance, properties, context) {
 
     let polygon = L.polygon(latLngs, optionsObject);
     
-    instance.data.pushPolygonListState(polygon);
+     // instance.data.pushPolygonListState(polygon);
     
     instance.data[`${properties.polygon_name}`] = polygon.addTo(instance.data.mymap);
 

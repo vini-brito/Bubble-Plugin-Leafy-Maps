@@ -105,10 +105,15 @@ function(instance, properties, context) {
 
         if (properties.popup_on_click && properties.use_custom_icon) {
 
-            let myIcon = L.icon({
-                iconUrl: `https:${properties.custom_icon_url}`,
-                shadowUrl: `https:${properties.custom_icon_shadow_url}`,
-            });
+           	let myIcon = L.icon({
+			iconUrl: `https:${properties.custom_icon_url}`,
+            iconSize:     [64, 64], // size of the icon
+            shadowSize:   [50, 64], // size of the shadow
+            iconAnchor:   [32, 64], // point of the icon which will correspond to marker's location
+            shadowAnchor: [4, 62],  // the same for the shadow
+            popupAnchor: [0, -64]   // point from which the popup should open relative to the iconAnchor
+
+		});
 
             if (properties.clusterize_markers) {
 
@@ -145,11 +150,15 @@ function(instance, properties, context) {
 
         } else if (!properties.popup_on_click && properties.use_custom_icon) {
 
-            let myIcon = L.icon({
-                iconUrl: `https:${properties.custom_icon_url}`,
-                shadowUrl: `https:${properties.custom_icon_shadow_url}`,
-            });
-
+          let myIcon = L.icon({
+			iconUrl: `https:${properties.custom_icon_url}`,
+            iconSize:     [64, 64], // size of the icon
+            shadowSize:   [50, 64], // size of the shadow
+            iconAnchor:   [32, 64], // point of the icon which will correspond to marker's location
+            shadowAnchor: [4, 62],  // the same for the shadow
+            popupAnchor: [0, -64]   // point from which the popup should open relative to the iconAnchor
+      
+		});
 
             if (properties.clusterize_markers) {
 
