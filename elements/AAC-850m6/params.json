@@ -477,22 +477,6 @@
             "name": "marker_unhovered_index",
             "value": "number"
         },
-        "AHj": {
-            "caption": "Map clicked latitude",
-            "initialization_code": {
-                "fn": "function(properties, context) {\n\n\n\n}"
-            },
-            "name": "map_clicked_latitude",
-            "value": "number"
-        },
-        "AHk": {
-            "caption": "Map clicked longitude",
-            "initialization_code": {
-                "fn": "function(properties, context) {\n\n\n\n}"
-            },
-            "name": "map_clicked_longitude",
-            "value": "number"
-        },
         "AIx": {
             "caption": "Is the point contained in the polygon?",
             "initialization_code": {
