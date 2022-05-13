@@ -1,0 +1,11 @@
+{
+    "caption": "Get map center",
+    "fields": {
+        "AJu": {
+            "caption": "Will publish to \"Map center\" latitude and longitude states and trigger the event \"Map center attained\".",
+            "editor": "Label",
+            "name": "will",
+            "rank": 0
+        }
+    }
+}
