@@ -153,6 +153,10 @@ function(instance, properties, context) {
 
     if (properties.enable_drawing) {
         setDrawingControls(instance, instance.data.mymap, instance.data.style);
+    } else {
+
+        instance.data.mode = "default";
+
     }
 
 
@@ -1494,7 +1498,7 @@ function(instance, properties, context) {
 
     if (properties.mouse_button === "right") {
         instance.data.mymap.on("contextmenu", (ev) => {
-           // if (instance.data.mode !== "default") return;
+            if (instance.data.mode !== "default") return;
             instance.publishState("click_map_coordinates_latitude", ev.latlng.lat)
             instance.publishState("click_map_coordinates_longitude", ev.latlng.lng)
             instance.triggerEvent("map_clicked");
@@ -1504,7 +1508,7 @@ function(instance, properties, context) {
 
     if (properties.mouse_button === "left") {
         instance.data.mymap.on("click", (ev) => {
-          //  if (instance.data.mode !== "default") return;
+            if (instance.data.mode !== "default") return;
             instance.publishState("click_map_coordinates_latitude", ev.latlng.lat)
             instance.publishState("click_map_coordinates_longitude", ev.latlng.lng)
             instance.triggerEvent("map_clicked");
