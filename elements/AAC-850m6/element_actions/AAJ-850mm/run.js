@@ -10,6 +10,7 @@ function(instance, properties, context) {
 
     instance.data.SAVED_POLYLINE = [];
 
+    instance.data.isMapboxGl = false;
 
     const mapid = properties.unique_map_name
     instance.canvas.empty()
@@ -98,7 +99,7 @@ function(instance, properties, context) {
 
         let tileName = properties.maptiler_tile.toLowerCase().trim();
 
-        var gl = L.mapboxGL({
+        L.mapboxGL({
             attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
             style: `https://api.maptiler.com/maps/${tileName}/style.json?key=${context.keys[`Maptiler access token`]}`
         }).addTo(instance.data.mymap);
@@ -113,9 +114,11 @@ function(instance, properties, context) {
 
             let mapElement = document.getElementById(mapid);
             mapElement.appendChild(holderDiv);
-            
+
 
         }
+
+        instance.data.isMapboxGl = true;
 
 
     }

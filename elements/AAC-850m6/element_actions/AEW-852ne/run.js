@@ -8,7 +8,7 @@ function(instance, properties, context) {
 
     }
 
-    if (properties.clusterize_markers) {
+    if (properties.clusterize_markers && !instance.data.isMapboxGl) {
         //place this in instance data whenever I get to erase it
         let options = {
 
@@ -19,6 +19,11 @@ function(instance, properties, context) {
         };
 
         instance.data[`markerCluster${properties.unique_name}`] = L.markerClusterGroup(options);
+
+    } else if (properties.clusterize_markers && instance.data.isMapboxGl) {
+
+        
+
 
     }
 
