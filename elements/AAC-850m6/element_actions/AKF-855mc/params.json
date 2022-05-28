@@ -12,11 +12,12 @@
         },
         "AKH": {
             "caption": "stroke_color",
+            "default_val": "rgba(0, 229, 250, 1)",
             "doc": "",
             "editor": "Color",
             "name": "stroke_color",
             "rank": 1,
-            "value": "number"
+            "value": "text"
         },
         "AKI": {
             "caption": "stroke_weight",
