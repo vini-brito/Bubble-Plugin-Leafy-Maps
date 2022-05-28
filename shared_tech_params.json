@@ -59,6 +59,10 @@
         "AJh": {
             "name": "usefulfunctions",
             "url": "//dd7tel2830j4w.cloudfront.net/f1640191632473x564774773206991200/usefulFunctions.js"
+        },
+        "AJw": {
+            "name": "geolib",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1653077396175x424933691083395650/index.js"
         }
     },
     "dependencies": {
