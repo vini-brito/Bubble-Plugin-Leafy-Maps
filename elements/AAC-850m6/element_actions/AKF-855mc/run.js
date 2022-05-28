@@ -1,5 +1,7 @@
 function(instance, properties, context) {
 
+  instance.data.mymap.getRenderer(instance.data.mymap).options.padding = 100;
+
 
   let optionsObject = {
 
@@ -11,7 +13,7 @@ function(instance, properties, context) {
     fillColor: properties.fill_color, // color string
     fillOpacity: properties.fill_opacity, // default is 0.2
     radius: properties.radius, // number, in meters
-    
+
   }
 
   instance.data[`${properties.circle_name}`] = L.circle(instance.data.mymap.getCenter(), optionsObject).addTo(instance.data.mymap);
