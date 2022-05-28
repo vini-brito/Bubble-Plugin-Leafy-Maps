@@ -1,0 +1,45 @@
+{
+    "caption": "Check if point is in circle radius with",
+    "fields": {
+        "AJy": {
+            "caption": "Checked point lat",
+            "doc": "A number. Example 5.123456. Refers to the point that will be checked if it is contained by the circle.",
+            "editor": "DynamicValue",
+            "name": "point_to_be_checked_latitude",
+            "rank": 0,
+            "value": "number"
+        },
+        "AJz": {
+            "caption": "Checked point lon",
+            "doc": "A number. Example 5.123456. Refers to the point that will be checked if it is contained by the circle.",
+            "editor": "DynamicValue",
+            "name": "point_to_be_checked_longitude",
+            "rank": 1,
+            "value": "number"
+        },
+        "AKA": {
+            "caption": "Circle center lat",
+            "doc": "A number. Example 5.123456. Refers to the circle that will be used to see if the point is inside it or not.",
+            "editor": "DynamicValue",
+            "name": "circle_center_latitude",
+            "rank": 2,
+            "value": "number"
+        },
+        "AKB": {
+            "caption": "Circle center lon",
+            "doc": "A number. Example 5.123456. Refers to the circle that will be used to see if the point is inside it or not.",
+            "editor": "DynamicValue",
+            "name": "circle_center_longitude",
+            "rank": 3,
+            "value": "number"
+        },
+        "AKC": {
+            "caption": "Circle radius",
+            "doc": "A number, in meters. Example 5000 (for 5km). Refers to the circle that will be used to see if the point is inside it or not.",
+            "editor": "DynamicValue",
+            "name": "circle_radius",
+            "rank": 4,
+            "value": "text"
+        }
+    }
+}

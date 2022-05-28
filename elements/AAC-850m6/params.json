@@ -66,6 +66,10 @@
         "AJv": {
             "caption": "Map center attained",
             "name": "map_center_attained"
+        },
+        "AKE": {
+            "caption": "Point inside circle radius checked",
+            "name": "point_inside_circle_radius_checked"
         }
     },
     "fields": {
@@ -544,6 +548,14 @@
             "is_list": false,
             "name": "which_zone_is_the_point_contained_in",
             "value": "text"
+        },
+        "AKD": {
+            "caption": "Is point inside circle radius",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "point_inside_circle",
+            "value": "boolean"
         }
     }
 }

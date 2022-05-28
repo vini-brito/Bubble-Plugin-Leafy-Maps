@@ -1,5 +1,6 @@
 {
     "caption": "Create container to get coordinate from address from Mapbox",
+    "doc": "",
     "fields": {
         "AJd": {
             "caption": "This specific workflow action uses Geocoding from Mapbox. You may only use responses from the Mapbox Geocoding API in conjunction with a Mapbox map. It is their policy. If you need something else, another geocoding vendor can be implemented for you, get in touch with me (plugin maker).",

@@ -75,7 +75,7 @@
         },
         "AEf": {
             "caption": "Unique name",
-            "doc": "A unique name to this series of markers. They will be suffixed with their index, for example if you write \"city\" the first one will be city1 and the second will be city2.",
+            "doc": "A unique name to this series of markers. They will be suffixed with their index, for example if you write \"city\" the first one will be city1 and the second will be city2. Do not add digits (0-9) nor dots or it will break. If you are adding a dynamic value, make sure it will not resolve to a text with digits or dots.",
             "editor": "DynamicValue",
             "name": "unique_name",
             "rank": 8,
@@ -84,7 +84,7 @@
         "AHR": {
             "caption": "Clusterize markers",
             "default_val": false,
-            "doc": "If \"yes\", will group these markers in a cluster. A cluster is a colored circle with a number saying how many markers it represents, when the user zooms in or clicks the circle, it disappears and displays its markers. Upon zoom out, the markers are again folded back into the circle. Clicking the cluster will zoom into it and spread its markers. Hovering it will reveal the polygon area that the markers inside it are covering.",
+            "doc": "If \"yes\", will group these markers in a cluster. A cluster is a colored circle with a number saying how many markers it represents, when the user zooms in or clicks the circle, it disappears and displays its markers. Upon zoom out, the markers are again folded back into the circle. Clicking the cluster will zoom into it and spread its markers. Hovering it will reveal the polygon area that the markers inside it are covering. This will not work with MapTiler provider due to it relying on a different technical base, hopefully in the future this feature will be added for MapTiler's base tech.",
             "editor": "DynamicValue",
             "name": "clusterize_markers",
             "rank": 9,
