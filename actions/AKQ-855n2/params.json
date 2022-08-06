@@ -1,0 +1,37 @@
+{
+    "category": "plugins",
+    "display": "Leafy Maps - Get HERE temporary token",
+    "fields": {
+        "AKU": {
+            "caption": "URL",
+            "default_val": "https://account.api.here.com/oauth2/token",
+            "doc": "Currently it is https://account.api.here.com/oauth2/token so it is the default, but if this API URL ever changes, just change it here.",
+            "editor": "DynamicValue",
+            "name": "url",
+            "rank": 2,
+            "value": "text"
+        },
+        "AKX": {
+            "caption": "This action requires a special pair of keys from HERE. It is not the key you use to display a map. They are the API access and API secret keys. You can get them from here: https://developer.here.com/tutorials/how-to-authenticate-with-here-oauth/#generating-here-oauth-credentials. And paste these keys in their corresponding fields in the plugin tab. Attention! It is not the \"HERE access token\" field, that one is public and is used to load a map from HERE, if you paste one of your API keys in that field, it will be publicly available and compromised, in this case, go to your HERE dashboard and rotate your keys.",
+            "editor": "Label",
+            "name": "this_action_requires_a_special_pair_of_keys_from_here._it_is_not_the_key_you_use_to_display_a_map._they_are_the_api_access_and_api_secret_keys._you_can_get_them_from_here:_how_to_get_it:_https://developer.here.com/tutorials/how-to-authenticate-with-here-oauth/#generating-here-oauth-credentials.",
+            "rank": 0
+        },
+        "AKY": {
+            "caption": "Use this token to access HERE backend API's, for example reverse geocoding. These tokens only last for 24 hours.",
+            "editor": "Label",
+            "name": "use_this_token_to_access_here_backend_api's,_for_example_reverse_geocoding._these_tokens_only_last_for_24_hours.",
+            "rank": 1
+        }
+    },
+    "return_value": {
+        "AKT": {
+            "caption": "Attained token",
+            "name": "attained_token",
+            "rank": 0,
+            "value": "text"
+        }
+    },
+    "type": "server_side",
+    "use_packages": true
+}

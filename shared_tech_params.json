@@ -84,6 +84,14 @@
         "AJl": {
             "caption": "Maptiler access token",
             "type": "client_safe"
+        },
+        "AKV": {
+            "caption": "Here API access key",
+            "type": "secure"
+        },
+        "AKW": {
+            "caption": "Here API secret key",
+            "type": "secure"
         }
     }
 }
