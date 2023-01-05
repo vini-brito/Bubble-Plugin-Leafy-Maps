@@ -1,4 +1,12 @@
 {
     "caption": "Filter list of coordinates by radius",
-    "doc": ""
+    "doc": "",
+    "fields": {
+        "AKb": {
+            "caption": "Incomplete feature, will do nothing. Check back in a newer version.",
+            "editor": "Label",
+            "name": "incomplete_feature,_will_do_nothing._check_back_in_a_newer_version.",
+            "rank": 0
+        }
+    }
 }

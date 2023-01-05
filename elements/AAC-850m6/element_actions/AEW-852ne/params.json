@@ -84,11 +84,94 @@
         "AHR": {
             "caption": "Clusterize markers",
             "default_val": false,
-            "doc": "If \"yes\", will group these markers in a cluster. A cluster is a colored circle with a number saying how many markers it represents, when the user zooms in or clicks the circle, it disappears and displays its markers. Upon zoom out, the markers are again folded back into the circle. Clicking the cluster will zoom into it and spread its markers. Hovering it will reveal the polygon area that the markers inside it are covering. This will not work with MapTiler provider due to it relying on a different technical base, hopefully in the future this feature will be added for MapTiler's base tech.",
+            "doc": "If \"yes\", will group these markers in a cluster. A cluster is a colored circle with a number saying how many markers it represents, when the user zooms in or clicks the circle, it disappears and displays its markers. Upon zoom out, the markers are again folded back into the circle. Clicking the cluster will zoom into it and spread its markers. Hovering it will reveal the polygon area that the markers inside it are covering. This will not work with MapTiler provider due to it relying on a different technical base, hopefully in the future this feature will be added for MapTiler's base tech. Small is 1 to 9 markers in the same cluster, medium is 10 to 99 markers, large is 100+ markers in the same cluster. If you do not want to differentiate by number of markers in the cluster, just apply the same color to all sizes at this section.",
             "editor": "DynamicValue",
             "name": "clusterize_markers",
             "rank": 9,
             "value": "boolean"
+        },
+        "AKi": {
+            "caption": "Small cluster color outside",
+            "default_val": "rgba(181, 226, 140, 0.6)",
+            "doc": "Default is #B5E28C.",
+            "editor": "Color",
+            "name": "small_cluster_color_out",
+            "rank": 10
+        },
+        "AKl": {
+            "caption": "Small cluster color inside",
+            "default_val": "rgba(110, 204, 57, 0.6)",
+            "doc": "Default is #6ECC39.",
+            "editor": "Color",
+            "name": "small_cluster_color_in",
+            "rank": 11
+        },
+        "AKm": {
+            "caption": "Medium cluster color outside",
+            "default_val": "rgba(241, 211, 87, 0.6)",
+            "doc": "Default is #F1D357.",
+            "editor": "Color",
+            "name": "medium_cluster_color_out",
+            "rank": 12
+        },
+        "AKn": {
+            "caption": "Medium cluster color inside",
+            "default_val": "rgba(240, 194, 12, 0.6)",
+            "doc": "Default is #F0C20C.",
+            "editor": "Color",
+            "name": "medium_cluster_color_in",
+            "rank": 13
+        },
+        "AKo": {
+            "caption": "Large cluster color outside",
+            "default_val": "rgba(253, 156, 115, 0.6)",
+            "doc": "Default is #FD9C73.",
+            "editor": "Color",
+            "name": "large_cluster_color_out",
+            "rank": 14
+        },
+        "AKp": {
+            "caption": "Large cluster color inside",
+            "default_val": "rgba(241, 128, 23, 0.6)",
+            "doc": "Default is #F18017.",
+            "editor": "Color",
+            "name": "large_cluster_color_in",
+            "rank": 15
+        },
+        "AKr": {
+            "caption": "Font size",
+            "default_val": "12",
+            "doc": "In pixels. For example 12. Do not write \"px\", just the number.",
+            "editor": "DynamicValue",
+            "name": "font_size",
+            "rank": 16,
+            "value": "text"
+        },
+        "AKs": {
+            "caption": "Font name",
+            "default_val": "Helvetica Neue",
+            "doc": "Default is Helvetica Neue. If the font you specify fails, these fallback options will automatically be used: Arial, Helvetica, sans-serif.",
+            "editor": "DynamicValue",
+            "name": "font_name",
+            "rank": 17,
+            "value": "text"
+        },
+        "AKt": {
+            "caption": "Font color",
+            "default_val": "rgba(0, 0, 0, 1)",
+            "doc": "Color of the number inside the marker cluster. Default is black.",
+            "editor": "Color",
+            "name": "font_color",
+            "rank": 18
+        },
+        "ALP": {
+            "caption": "Max zoom",
+            "doc": "A zoom value, which is a number from 1 to 20 with 1 being farthest from the ground and 1 being closest to the ground. If set, at the defined zoom level and below markers will not be clustered. In other words, if you want to prevent your markers from clustering at a higher zoom than normal, do set a value here. If you set to 1, they will never cluster, if you set to 20 they will cluster normally, usually at zoom 14 or similar, so 20 or a value too close to the ground may have no practical effect as the markers would already split from the cluster before arriving the zoom level 17 or more.",
+            "editor": "DynamicValue",
+            "name": "max_zoom",
+            "optional": true,
+            "rank": 19,
+            "value": "number"
         }
     }
 }

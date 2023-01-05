@@ -1,0 +1,786 @@
+{
+    "category": "plugins",
+    "display": "Leafy Maps - Get BR coordinate data from ESRI",
+    "fields": {
+        "ALR": {
+            "caption": "Latitude",
+            "editor": "DynamicValue",
+            "name": "latitude",
+            "rank": 0,
+            "value": "number"
+        },
+        "ALS": {
+            "caption": "Longitude",
+            "editor": "DynamicValue",
+            "name": "longitude",
+            "rank": 1,
+            "value": "number"
+        }
+    },
+    "return_value": {
+        "ALT": {
+            "caption": "populationToPolygonSizeRating",
+            "name": "populationToPolygonSizeRating",
+            "rank": 0,
+            "value": "number"
+        },
+        "ALU": {
+            "caption": "apportionmentConfidence",
+            "name": "apportionmentConfidence",
+            "rank": 1,
+            "value": "number"
+        },
+        "ALV": {
+            "caption": "PAGE02_CY",
+            "name": "PAGE02_CY",
+            "rank": 2,
+            "value": "number"
+        },
+        "ALW": {
+            "caption": "PAGE03_CY",
+            "name": "PAGE03_CY",
+            "rank": 3,
+            "value": "number"
+        },
+        "ALX": {
+            "caption": "PAGE04_CY",
+            "name": "PAGE04_CY",
+            "rank": 4,
+            "value": "number"
+        },
+        "ALY": {
+            "caption": "TOTPOP_CY",
+            "name": "TOTPOP_CY",
+            "rank": 5,
+            "value": "number"
+        },
+        "ALZ": {
+            "caption": "POPDENS_CY",
+            "name": "POPDENS_CY",
+            "rank": 6,
+            "value": "number"
+        },
+        "ALa": {
+            "caption": "POPPRM_CY",
+            "name": "POPPRM_CY",
+            "rank": 7,
+            "value": "number"
+        },
+        "ALb": {
+            "caption": "FEMALES_CY",
+            "name": "FEMALES_CY",
+            "rank": 8,
+            "value": "number"
+        },
+        "ALc": {
+            "caption": "MALES_CY",
+            "name": "MALES_CY",
+            "rank": 9,
+            "value": "number"
+        },
+        "ALd": {
+            "caption": "TOTPOP",
+            "name": "TOTPOP",
+            "rank": 10,
+            "value": "number"
+        },
+        "ALe": {
+            "caption": "TOTHH",
+            "name": "TOTHH",
+            "rank": 11,
+            "value": "number"
+        },
+        "ALf": {
+            "caption": "TOTMALES",
+            "name": "TOTMALES",
+            "rank": 12,
+            "value": "number"
+        },
+        "ALg": {
+            "caption": "TOTFEMALES",
+            "name": "TOTFEMALES",
+            "rank": 13,
+            "value": "number"
+        },
+        "ALh": {
+            "caption": "AVGHHSZ",
+            "name": "AVGHHSZ",
+            "rank": 14,
+            "value": "number"
+        },
+        "ALi": {
+            "caption": "PP_CY",
+            "name": "PP_CY",
+            "rank": 15,
+            "value": "number"
+        },
+        "ALj": {
+            "caption": "PPIDX_CY",
+            "name": "PPIDX_CY",
+            "rank": 16,
+            "value": "number"
+        },
+        "ALk": {
+            "caption": "PPPC_CY",
+            "name": "PPPC_CY",
+            "rank": 17,
+            "value": "number"
+        },
+        "ALl": {
+            "caption": "PPPRM_CY",
+            "name": "PPPRM_CY",
+            "rank": 18,
+            "value": "number"
+        },
+        "ALm": {
+            "caption": "PAGE01_CY",
+            "name": "PAGE01_CY",
+            "rank": 19,
+            "value": "number"
+        },
+        "ALn": {
+            "caption": "PAGE05_CY",
+            "name": "PAGE05_CY",
+            "rank": 20,
+            "value": "number"
+        },
+        "ALo": {
+            "caption": "TOTHH_CY",
+            "name": "TOTHH_CY",
+            "rank": 21,
+            "value": "number"
+        },
+        "ALp": {
+            "caption": "AVGHHSZ_CY",
+            "name": "AVGHHSZ_CY",
+            "rank": 22,
+            "value": "number"
+        },
+        "ALq": {
+            "caption": "EDUC02_CY",
+            "name": "EDUC02_CY",
+            "rank": 23,
+            "value": "number"
+        },
+        "ALr": {
+            "caption": "EDUC03_CY",
+            "name": "EDUC03_CY",
+            "rank": 24,
+            "value": "number"
+        },
+        "ALs": {
+            "caption": "EDUC04_CY",
+            "name": "EDUC04_CY",
+            "rank": 25,
+            "value": "number"
+        },
+        "ALt": {
+            "caption": "CS01_CY",
+            "name": "CS01_CY",
+            "rank": 26,
+            "value": "number"
+        },
+        "ALu": {
+            "caption": "CS04_CY",
+            "name": "CS04_CY",
+            "rank": 27,
+            "value": "number"
+        },
+        "ALv": {
+            "caption": "CS13_CY",
+            "name": "CS13_CY",
+            "rank": 28,
+            "value": "number"
+        },
+        "ALw": {
+            "caption": "CS02_CY",
+            "name": "CS02_CY",
+            "rank": 29,
+            "value": "number"
+        },
+        "ALx": {
+            "caption": "CS02PRM_CY",
+            "name": "CS02PRM_CY",
+            "rank": 30,
+            "value": "number"
+        },
+        "ALy": {
+            "caption": "CSPC02_CY",
+            "name": "CSPC02_CY",
+            "rank": 31,
+            "value": "number"
+        },
+        "ALz": {
+            "caption": "CS02IDX_CY",
+            "name": "CS02IDX_CY",
+            "rank": 32,
+            "value": "number"
+        },
+        "AMA": {
+            "caption": "CS17_CY",
+            "name": "CS17_CY",
+            "rank": 33,
+            "value": "number"
+        },
+        "AMB": {
+            "caption": "CS17PRM_CY",
+            "name": "CS17PRM_CY",
+            "rank": 34,
+            "value": "number"
+        },
+        "AMC": {
+            "caption": "CSPC17_CY",
+            "name": "CSPC17_CY",
+            "rank": 35,
+            "value": "number"
+        },
+        "AMD": {
+            "caption": "CS17IDX_CY",
+            "name": "CS17IDX_CY",
+            "rank": 36,
+            "value": "number"
+        },
+        "AME": {
+            "caption": "CS18_CY",
+            "name": "CS18_CY",
+            "rank": 37,
+            "value": "number"
+        },
+        "AMF": {
+            "caption": "CS18PRM_CY",
+            "name": "CS18PRM_CY",
+            "rank": 38,
+            "value": "number"
+        },
+        "AMG": {
+            "caption": "CSPC18_CY",
+            "name": "CSPC18_CY",
+            "rank": 39,
+            "value": "number"
+        },
+        "AMH": {
+            "caption": "CS18IDX_CY",
+            "name": "CS18IDX_CY",
+            "rank": 40,
+            "value": "number"
+        },
+        "AMI": {
+            "caption": "CS04PRM_CY",
+            "name": "CS04PRM_CY",
+            "rank": 41,
+            "value": "number"
+        },
+        "AMJ": {
+            "caption": "CSPC04_CY",
+            "name": "CSPC04_CY",
+            "rank": 42,
+            "value": "number"
+        },
+        "AMK": {
+            "caption": "CS04IDX_CY",
+            "name": "CS04IDX_CY",
+            "rank": 43,
+            "value": "number"
+        },
+        "AML": {
+            "caption": "CS13PRM_CY",
+            "name": "CS13PRM_CY",
+            "rank": 44,
+            "value": "number"
+        },
+        "AMM": {
+            "caption": "CSPC13_CY",
+            "name": "CSPC13_CY",
+            "rank": 45,
+            "value": "number"
+        },
+        "AMN": {
+            "caption": "CS13IDX_CY",
+            "name": "CS13IDX_CY",
+            "rank": 46,
+            "value": "number"
+        },
+        "AMO": {
+            "caption": "CS15_CY",
+            "name": "CS15_CY",
+            "rank": 47,
+            "value": "number"
+        },
+        "AMP": {
+            "caption": "CS15PRM_CY",
+            "name": "CS15PRM_CY",
+            "rank": 48,
+            "value": "number"
+        },
+        "AMQ": {
+            "caption": "CSPC15_CY",
+            "name": "CSPC15_CY",
+            "rank": 49,
+            "value": "number"
+        },
+        "AMR": {
+            "caption": "CS15IDX_CY",
+            "name": "CS15IDX_CY",
+            "rank": 50,
+            "value": "number"
+        },
+        "AMS": {
+            "caption": "CS01PRM_CY",
+            "name": "CS01PRM_CY",
+            "rank": 51,
+            "value": "number"
+        },
+        "AMT": {
+            "caption": "CSPC01_CY",
+            "name": "CSPC01_CY",
+            "rank": 52,
+            "value": "number"
+        },
+        "AMU": {
+            "caption": "CS01IDX_CY",
+            "name": "CS01IDX_CY",
+            "rank": 53,
+            "value": "number"
+        },
+        "AMV": {
+            "caption": "CS05_CY",
+            "name": "CS05_CY",
+            "rank": 54,
+            "value": "number"
+        },
+        "AMW": {
+            "caption": "CS05PRM_CY",
+            "name": "CS05PRM_CY",
+            "rank": 55,
+            "value": "number"
+        },
+        "AMX": {
+            "caption": "CSPC05_CY",
+            "name": "CSPC05_CY",
+            "rank": 56,
+            "value": "number"
+        },
+        "AMY": {
+            "caption": "CS05IDX_CY",
+            "name": "CS05IDX_CY",
+            "rank": 57,
+            "value": "number"
+        },
+        "AMZ": {
+            "caption": "CS06_CY",
+            "name": "CS06_CY",
+            "rank": 58,
+            "value": "number"
+        },
+        "AMa": {
+            "caption": "CS06PRM_CY",
+            "name": "CS06PRM_CY",
+            "rank": 59,
+            "value": "number"
+        },
+        "AMb": {
+            "caption": "CSPC06_CY",
+            "name": "CSPC06_CY",
+            "rank": 60,
+            "value": "number"
+        },
+        "AMc": {
+            "caption": "CS06IDX_CY",
+            "name": "CS06IDX_CY",
+            "rank": 61,
+            "value": "number"
+        },
+        "AMd": {
+            "caption": "CS10_CY",
+            "name": "CS10_CY",
+            "rank": 62,
+            "value": "number"
+        },
+        "AMe": {
+            "caption": "CS10PRM_CY",
+            "name": "CS10PRM_CY",
+            "rank": 63,
+            "value": "number"
+        },
+        "AMf": {
+            "caption": "CSPC10_CY",
+            "name": "CSPC10_CY",
+            "rank": 64,
+            "value": "number"
+        },
+        "AMg": {
+            "caption": "CS10IDX_CY",
+            "name": "CS10IDX_CY",
+            "rank": 65,
+            "value": "number"
+        },
+        "AMh": {
+            "caption": "CS08_CY",
+            "name": "CS08_CY",
+            "rank": 66,
+            "value": "number"
+        },
+        "AMi": {
+            "caption": "CS08PRM_CY",
+            "name": "CS08PRM_CY",
+            "rank": 67,
+            "value": "number"
+        },
+        "AMj": {
+            "caption": "CSPC08_CY",
+            "name": "CSPC08_CY",
+            "rank": 68,
+            "value": "number"
+        },
+        "AMk": {
+            "caption": "CS08IDX_CY",
+            "name": "CS08IDX_CY",
+            "rank": 69,
+            "value": "number"
+        },
+        "AMl": {
+            "caption": "CS11_CY",
+            "name": "CS11_CY",
+            "rank": 70,
+            "value": "number"
+        },
+        "AMm": {
+            "caption": "CS11PRM_CY",
+            "name": "CS11PRM_CY",
+            "rank": 71,
+            "value": "number"
+        },
+        "AMn": {
+            "caption": "CSPC11_CY",
+            "name": "CSPC11_CY",
+            "rank": 72,
+            "value": "number"
+        },
+        "AMo": {
+            "caption": "CS11IDX_CY",
+            "name": "CS11IDX_CY",
+            "rank": 73,
+            "value": "number"
+        },
+        "AMp": {
+            "caption": "CS07_CY",
+            "name": "CS07_CY",
+            "rank": 74,
+            "value": "number"
+        },
+        "AMq": {
+            "caption": "CS07PRM_CY",
+            "name": "CS07PRM_CY",
+            "rank": 75,
+            "value": "number"
+        },
+        "AMr": {
+            "caption": "CSPC07_CY",
+            "name": "CSPC07_CY",
+            "rank": 76,
+            "value": "number"
+        },
+        "AMs": {
+            "caption": "CS07IDX_CY",
+            "name": "CS07IDX_CY",
+            "rank": 77,
+            "value": "number"
+        },
+        "AMt": {
+            "caption": "CS09_CY",
+            "name": "CS09_CY",
+            "rank": 78,
+            "value": "number"
+        },
+        "AMu": {
+            "caption": "CS09PRM_CY",
+            "name": "CS09PRM_CY",
+            "rank": 79,
+            "value": "number"
+        },
+        "AMv": {
+            "caption": "CSPC09_CY",
+            "name": "CSPC09_CY",
+            "rank": 80,
+            "value": "number"
+        },
+        "AMw": {
+            "caption": "CS09IDX_CY",
+            "name": "CS09IDX_CY",
+            "rank": 81,
+            "value": "number"
+        },
+        "AMx": {
+            "caption": "CS20_CY",
+            "name": "CS20_CY",
+            "rank": 82,
+            "value": "number"
+        },
+        "AMy": {
+            "caption": "CS20PRM_CY",
+            "name": "CS20PRM_CY",
+            "rank": 83,
+            "value": "number"
+        },
+        "AMz": {
+            "caption": "CSPC20_CY",
+            "name": "CSPC20_CY",
+            "rank": 84,
+            "value": "number"
+        },
+        "ANA": {
+            "caption": "CS20IDX_CY",
+            "name": "CS20IDX_CY",
+            "rank": 85,
+            "value": "number"
+        },
+        "ANB": {
+            "caption": "CS12_CY",
+            "name": "CS12_CY",
+            "rank": 86,
+            "value": "number"
+        },
+        "ANC": {
+            "caption": "CS12PRM_CY",
+            "name": "CS12PRM_CY",
+            "rank": 87,
+            "value": "number"
+        },
+        "AND": {
+            "caption": "CSPC12_CY",
+            "name": "CSPC12_CY",
+            "rank": 88,
+            "value": "number"
+        },
+        "ANE": {
+            "caption": "CS12IDX_CY",
+            "name": "CS12IDX_CY",
+            "rank": 89,
+            "value": "number"
+        },
+        "ANF": {
+            "caption": "CS19_CY",
+            "name": "CS19_CY",
+            "rank": 90,
+            "value": "number"
+        },
+        "ANG": {
+            "caption": "CS19PRM_CY",
+            "name": "CS19PRM_CY",
+            "rank": 91,
+            "value": "number"
+        },
+        "ANH": {
+            "caption": "CSPC19_CY",
+            "name": "CSPC19_CY",
+            "rank": 92,
+            "value": "number"
+        },
+        "ANI": {
+            "caption": "CS19IDX_CY",
+            "name": "CS19IDX_CY",
+            "rank": 93,
+            "value": "number"
+        },
+        "ANJ": {
+            "caption": "CS14_CY",
+            "name": "CS14_CY",
+            "rank": 94,
+            "value": "number"
+        },
+        "ANK": {
+            "caption": "CS14PRM_CY",
+            "name": "CS14PRM_CY",
+            "rank": 95,
+            "value": "number"
+        },
+        "ANL": {
+            "caption": "CSPC14_CY",
+            "name": "CSPC14_CY",
+            "rank": 96,
+            "value": "number"
+        },
+        "ANM": {
+            "caption": "CS14IDX_CY",
+            "name": "CS14IDX_CY",
+            "rank": 97,
+            "value": "number"
+        },
+        "ANN": {
+            "caption": "CS16_CY",
+            "name": "CS16_CY",
+            "rank": 98,
+            "value": "number"
+        },
+        "ANO": {
+            "caption": "CS16PRM_CY",
+            "name": "CS16PRM_CY",
+            "rank": 99,
+            "value": "number"
+        },
+        "ANP": {
+            "caption": "CSPC16_CY",
+            "name": "CSPC16_CY",
+            "rank": 100,
+            "value": "number"
+        },
+        "ANQ": {
+            "caption": "CS16IDX_CY",
+            "name": "CS16IDX_CY",
+            "rank": 101,
+            "value": "number"
+        },
+        "ANR": {
+            "caption": "CS03_CY",
+            "name": "CS03_CY",
+            "rank": 102,
+            "value": "number"
+        },
+        "ANS": {
+            "caption": "CS03PRM_CY",
+            "name": "CS03PRM_CY",
+            "rank": 103,
+            "value": "number"
+        },
+        "ANT": {
+            "caption": "CSPC03_CY",
+            "name": "CSPC03_CY",
+            "rank": 104,
+            "value": "number"
+        },
+        "ANU": {
+            "caption": "CS03IDX_CY",
+            "name": "CS03IDX_CY",
+            "rank": 105,
+            "value": "number"
+        },
+        "ANV": {
+            "caption": "FAGE01_CY",
+            "name": "FAGE01_CY",
+            "rank": 106,
+            "value": "number"
+        },
+        "ANW": {
+            "caption": "FAGE02_CY",
+            "name": "FAGE02_CY",
+            "rank": 107,
+            "value": "number"
+        },
+        "ANX": {
+            "caption": "FAGE03_CY",
+            "name": "FAGE03_CY",
+            "rank": 108,
+            "value": "number"
+        },
+        "ANY": {
+            "caption": "FAGE04_CY",
+            "name": "FAGE04_CY",
+            "rank": 109,
+            "value": "number"
+        },
+        "ANZ": {
+            "caption": "FAGE05_CY",
+            "name": "FAGE05_CY",
+            "rank": 110,
+            "value": "number"
+        },
+        "ANa": {
+            "caption": "MAGE01_CY",
+            "name": "MAGE01_CY",
+            "rank": 111,
+            "value": "number"
+        },
+        "ANb": {
+            "caption": "MAGE02_CY",
+            "name": "MAGE02_CY",
+            "rank": 112,
+            "value": "number"
+        },
+        "ANc": {
+            "caption": "MAGE03_CY",
+            "name": "MAGE03_CY",
+            "rank": 113,
+            "value": "number"
+        },
+        "ANd": {
+            "caption": "MAGE04_CY",
+            "name": "MAGE04_CY",
+            "rank": 114,
+            "value": "number"
+        },
+        "ANe": {
+            "caption": "MAGE05_CY",
+            "name": "MAGE05_CY",
+            "rank": 115,
+            "value": "number"
+        },
+        "ANf": {
+            "caption": "EDUC01_CY",
+            "name": "EDUC01_CY",
+            "rank": 116,
+            "value": "number"
+        },
+        "ANg": {
+            "caption": "EDUC05_CY",
+            "name": "EDUC05_CY",
+            "rank": 117,
+            "value": "number"
+        },
+        "ANh": {
+            "caption": "bufferUnitsAlias",
+            "name": "bufferUnitsAlias",
+            "rank": 118,
+            "value": "text"
+        },
+        "ANi": {
+            "caption": "bufferRadii",
+            "name": "bufferRadii",
+            "rank": 119,
+            "value": "number"
+        },
+        "ANj": {
+            "caption": "ID",
+            "name": "ID",
+            "rank": 120,
+            "value": "text"
+        },
+        "ANk": {
+            "caption": "OBJECTID",
+            "name": "OBJECTID",
+            "rank": 121,
+            "value": "number"
+        },
+        "ANl": {
+            "caption": "sourceCountry",
+            "name": "sourceCountry",
+            "rank": 122,
+            "value": "text"
+        },
+        "ANm": {
+            "caption": "areaType",
+            "name": "areaType",
+            "rank": 123,
+            "value": "text"
+        },
+        "ANn": {
+            "caption": "bufferUnits",
+            "name": "bufferUnits",
+            "rank": 124,
+            "value": "text"
+        },
+        "ANo": {
+            "caption": "aggregationMethod",
+            "name": "aggregationMethod",
+            "rank": 125,
+            "value": "text"
+        },
+        "ANp": {
+            "caption": "HasData",
+            "name": "HasData",
+            "rank": 126,
+            "value": "number"
+        }
+    },
+    "type": "server_side",
+    "use_packages": true
+}

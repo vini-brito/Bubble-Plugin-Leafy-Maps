@@ -52,11 +52,11 @@
             "name": "marker_unhovered"
         },
         "AIy": {
-            "caption": "User's location is inside area",
+            "caption": "Point location is inside area",
             "name": "user_location_is_inside_area"
         },
         "AIz": {
-            "caption": "When user's location is outside  area",
+            "caption": "Point location is outside area",
             "name": "user_location_is_outside_area"
         },
         "AJa": {
@@ -70,11 +70,19 @@
         "AKE": {
             "caption": "Point inside circle radius checked",
             "name": "point_inside_circle_radius_checked"
+        },
+        "ALG": {
+            "caption": "Popup sent data to host page",
+            "name": "popup_sent_data_to_host_page"
+        },
+        "ALO": {
+            "caption": "Cluster clicked",
+            "name": "cluster_clicked"
         }
     },
     "fields": {
         "ADb": {
-            "caption": "Congratulations fellow Bubbler! You've just attained more power by installing this plugin. Come visit your custom plugin shop www.unlimitedbubbling.dev and get even more!",
+            "caption": "Congratulations fellow Bubbler! You've just attained more power by installing this plugin. Come visit your custom plugin shop www.unlimitedbubbling.dev and get even more! Just want to say thank you? Then buy me a coffee: https://ko-fi.com/viniciusbrito 😊☕",
             "editor": "Label",
             "name": "a",
             "rank": 0
@@ -556,6 +564,23 @@
             },
             "name": "point_inside_circle",
             "value": "boolean"
+        },
+        "ALF": {
+            "caption": "Data from popup",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "data_from_popup",
+            "value": "text"
+        },
+        "ALN": {
+            "caption": "Cluster clicked marker IDs",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": true,
+            "name": "cluster_clicked_marker_ids",
+            "value": "text"
         }
     }
 }

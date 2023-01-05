@@ -1,0 +1,21 @@
+{
+    "category": "plugins",
+    "display": "Leafy Maps - Send data to host page (popup)",
+    "fields": {
+        "ALL": {
+            "caption": "Data to be sent",
+            "doc": "Something you want to use in the host page. For example the unique ID of what was clicked inside the popup page.",
+            "editor": "DynamicValue",
+            "name": "data_to_be_sent",
+            "rank": 0,
+            "value": "text"
+        },
+        "ALM": {
+            "caption": "This workflow action is meant to be used in a page that is going to be displayed inside a popup being opened by Leafy Maps. With this, you can allow interactivity between a page that is inside a popup, for example if you want the user to press a button inside the popup and then to trigger a workflow with a specific information from within the popup, this is how you do it. For example the user can click \"Book house\" inside a page inside a popup and then in your host page, which is the one showing the map, you bring some data based on that specific database object. Usually you will pass a unique ID to be used in the host page. Once the data is sent, it will be published in a state of the Leafy Map and trigger an event. Right now they are called: \"Popup sent data to host page\" and \"Data from popup\". Or maybe you want to send a command text, like \"accept\" or \"book X\". Also you can send in consolidated data in a single text and split it in the host page using the \"split\" operator. Be creative, you are a developer! (:",
+            "editor": "Label",
+            "name": "inforr",
+            "rank": 1
+        }
+    },
+    "type": "client_side"
+}

@@ -41,14 +41,32 @@ function(instance, properties, context) {
     instance.data.mymap = mymap;
 
     if (properties.tile_provider === "Mapbox") {
-        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-            attribution: '&copy; <a href="https://www.mapbox.com/">Mapbox</a>',
-            tileSize: 512,
-            maxZoom: 20,
-            zoomOffset: -1,
-            id: `mapbox/${properties.mapbox_tile}`,
-            accessToken: context.keys["Mapbox access token"]
-        }).addTo(instance.data.mymap);
+
+
+        if (properties.mapbox_tile !== "Custom from studio") {
+
+            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                attribution: '&copy; <a href="https://www.mapbox.com/">Mapbox</a>',
+                tileSize: 512,
+                maxZoom: 20,
+                zoomOffset: -1,
+                id: `mapbox/${properties.mapbox_tile}`,
+                accessToken: context.keys["Mapbox access token"]
+            }).addTo(instance.data.mymap);
+
+
+        } else {
+
+            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                attribution: '&copy; <a href="https://www.mapbox.com/">Mapbox</a>',
+                tileSize: 512,
+                maxZoom: 20,
+                zoomOffset: -1,
+                id: properties.mapbox_custom_id,
+                accessToken: context.keys["Mapbox access token"]
+            }).addTo(instance.data.mymap);
+            
+        }
     }
 
     if (properties.tile_provider === "Stadia") {

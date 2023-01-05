@@ -17,6 +17,19 @@ function(instance, properties, context) {
     };
 
 
+    window.addEventListener("message", (event) => {
+
+
+        if (event.data.identify === "leafyMaps") {
+
+            instance.publishState("data_from_popup", event.data.content);
+            instance.triggerEvent("popup_sent_data_to_host_page");
+
+        }
+
+    }, false);
+
+
     if (properties.custom_popup_url) {
 
         var fixedIframeUrl = protocolFix(properties.custom_popup_url);

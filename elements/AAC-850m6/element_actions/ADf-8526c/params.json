@@ -1,5 +1,5 @@
 {
-    "caption": "Load Polygons list",
+    "caption": "Load polygons list",
     "doc": "This action loads a list of polygons.",
     "fields": {
         "ADg": {
@@ -122,6 +122,106 @@
             "optional": true,
             "rank": 11,
             "value": "text"
+        },
+        "AKu": {
+            "caption": "*Incomplete, do not use yet, will do nothing if enabled* Alternatively pass list of styles for them to be applied to the list of polygons. Note that this will work like this: First style item will be used on the first polygon item and so on, even if this first polygon is actually a multi polygon, then the first style item will be applied to all the polygons inside the multi-polygon that is in the position of item#1. Check the fields above for examples and options on what to pass as list values.",
+            "doc": "",
+            "editor": "Label",
+            "name": "alternatively_pass_list_of_styles_for_them_to_be_applied_to_the_list_of_polygons._note_that_this_will_work_like_this:_first_style_item_will_be_used_on_the_first_polygon_item_and_so_on,_even_if_this_first_polygon_is_actually_a_multi_polygon,_then_the_first_style_item_will_be_applied_to_all_the_polygons_inside_the_multi-polygon_that_is_in_the_position_of_item#1.",
+            "rank": 14
+        },
+        "AKv": {
+            "caption": "Draw strokes",
+            "doc": "List of yes/no's.",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "draw_strokes",
+            "optional": true,
+            "rank": 16,
+            "value": "boolean"
+        },
+        "AKw": {
+            "caption": "Use list of styles",
+            "default_val": false,
+            "doc": "If yes, will apply the style values below. If no, will ignore the style values below.",
+            "editor": "DynamicValue",
+            "name": "use_list_of_styles",
+            "optional": false,
+            "rank": 15,
+            "value": "boolean"
+        },
+        "AKx": {
+            "caption": "Stroke colors",
+            "doc": "List of color hex codes, like this #9E2929. Is a list of texts, technically.",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "stroke_colors",
+            "optional": true,
+            "rank": 17,
+            "value": "text"
+        },
+        "AKy": {
+            "caption": "Stroke weights",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "stroke_weights",
+            "optional": true,
+            "rank": 18,
+            "value": "number"
+        },
+        "AKz": {
+            "caption": "Stroke opacities",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "stroke_opacitys",
+            "optional": true,
+            "rank": 19,
+            "value": "number"
+        },
+        "ALA": {
+            "caption": "Line caps",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "line_caps",
+            "optional": true,
+            "rank": 20,
+            "value": "text"
+        },
+        "ALB": {
+            "caption": "Line joins",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "line_joins",
+            "optional": true,
+            "rank": 21,
+            "value": "text"
+        },
+        "ALC": {
+            "caption": "Polygon fills",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "polygon_fills",
+            "optional": true,
+            "rank": 22,
+            "value": "boolean"
+        },
+        "ALD": {
+            "caption": "Fill colors",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "fill_colors",
+            "optional": true,
+            "rank": 23,
+            "value": "text"
+        },
+        "ALE": {
+            "caption": "Fill opacities",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "fill_opacitys",
+            "optional": true,
+            "rank": 24,
+            "value": "number"
         }
     }
 }

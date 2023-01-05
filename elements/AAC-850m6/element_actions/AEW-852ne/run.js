@@ -15,14 +15,15 @@ function(instance, properties, context) {
             zoomToBoundsOnClick: true,
             showCoverageOnHover: true,
             spiderfyOnMaxZoom: false,
+            disableClusteringAtZoom: properties.max_zoom,
 
         };
 
-        instance.data[`markerCluster${properties.unique_name}`] = L.markerClusterGroup(options);
+        instance.data[`markerCluster${properties.unique_name}`] = L.markerClusterGroup(options).on('clusterclick', clusterClicked);
 
     } else if (properties.clusterize_markers && instance.data.isMapboxGl) {
+        //placeholder for future MapboxGL clusters
 
-        
 
 
     }
@@ -68,6 +69,20 @@ function(instance, properties, context) {
 
     }
 
+
+    function clusterClicked(e) {
+
+        let nameOfMarkersInsideCluster = e.layer.getAllChildMarkers().map(markerObj => markerObj.options.listedMarkerUniqueName);
+
+
+        instance.publishState("cluster_clicked_marker_ids", nameOfMarkersInsideCluster);
+
+        instance.triggerEvent("cluster_clicked");
+
+    }
+
+
+
     // this returns an array holding the list of texts (strings), booleans (yes/no) and integers (decimals and numbers)
     const getList = (thingWithList, startPosition, finishPosition) => {
         let returnedList = thingWithList.get(startPosition, finishPosition);
@@ -110,15 +125,15 @@ function(instance, properties, context) {
 
         if (properties.popup_on_click && properties.use_custom_icon) {
 
-           	let myIcon = L.icon({
-			iconUrl: `https:${properties.custom_icon_url}`,
-            iconSize:     [64, 64], // size of the icon
-            shadowSize:   [50, 64], // size of the shadow
-            iconAnchor:   [32, 64], // point of the icon which will correspond to marker's location
-            shadowAnchor: [4, 62],  // the same for the shadow
-            popupAnchor: [0, -64]   // point from which the popup should open relative to the iconAnchor
+            let myIcon = L.icon({
+                iconUrl: `https:${properties.custom_icon_url}`,
+                iconSize: [64, 64], // size of the icon
+                shadowSize: [50, 64], // size of the shadow
+                iconAnchor: [32, 64], // point of the icon which will correspond to marker's location
+                shadowAnchor: [4, 62],  // the same for the shadow
+                popupAnchor: [0, -64]   // point from which the popup should open relative to the iconAnchor
 
-		});
+            });
 
             if (properties.clusterize_markers) {
 
@@ -155,15 +170,15 @@ function(instance, properties, context) {
 
         } else if (!properties.popup_on_click && properties.use_custom_icon) {
 
-          let myIcon = L.icon({
-			iconUrl: `https:${properties.custom_icon_url}`,
-            iconSize:     [64, 64], // size of the icon
-            shadowSize:   [50, 64], // size of the shadow
-            iconAnchor:   [32, 64], // point of the icon which will correspond to marker's location
-            shadowAnchor: [4, 62],  // the same for the shadow
-            popupAnchor: [0, -64]   // point from which the popup should open relative to the iconAnchor
-      
-		});
+            let myIcon = L.icon({
+                iconUrl: `https:${properties.custom_icon_url}`,
+                iconSize: [64, 64], // size of the icon
+                shadowSize: [50, 64], // size of the shadow
+                iconAnchor: [32, 64], // point of the icon which will correspond to marker's location
+                shadowAnchor: [4, 62],  // the same for the shadow
+                popupAnchor: [0, -64]   // point from which the popup should open relative to the iconAnchor
+
+            });
 
             if (properties.clusterize_markers) {
 
@@ -209,8 +224,41 @@ function(instance, properties, context) {
 
     if (properties.clusterize_markers) {
 
-        instance.data[`markerCluster${properties.unique_name}`].addTo(instance.data.mymap)
 
+        var sheetForClusterStyle = document.createElement('style');
+        sheetForClusterStyle.innerHTML =
+            `.marker-cluster-small {
+                background-color: ${properties.small_cluster_color_out} !important;
+                }
+            .marker-cluster-small div {
+                background-color: ${properties.small_cluster_color_in} !important;
+                }
+            
+            .marker-cluster-medium {
+                background-color: ${properties.medium_cluster_color_out} !important;
+                }
+            .marker-cluster-medium div {
+                background-color: ${properties.medium_cluster_color_in} !important;
+                }
+            
+            .marker-cluster-large {
+                background-color: ${properties.large_cluster_color_out} !important;
+                }
+            .marker-cluster-large div {
+                background-color: ${properties.large_cluster_color_in} !important;
+                }
+            
+            .marker-cluster div {
+            
+                font: ${properties.font_size}px "${properties.font_name}", Arial, Helvetica, sans-serif !important;
+                color: ${properties.font_color} !important;
+            
+                }`;
+
+        document.head.appendChild(sheetForClusterStyle);
+
+
+        instance.data[`markerCluster${properties.unique_name}`].addTo(instance.data.mymap);
     }
 
 

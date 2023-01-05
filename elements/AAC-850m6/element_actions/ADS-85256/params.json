@@ -29,6 +29,12 @@
             "name": "long2",
             "rank": 3,
             "value": "number"
+        },
+        "AKa": {
+            "caption": "Returns the distance between two geographical coordinates. By default this measures distance in meters.",
+            "editor": "Label",
+            "name": "info",
+            "rank": 4
         }
     }
 }

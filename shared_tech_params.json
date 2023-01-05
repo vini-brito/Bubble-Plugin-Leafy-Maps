@@ -92,6 +92,10 @@
         "AKW": {
             "caption": "Here API secret key",
             "type": "secure"
+        },
+        "ANq": {
+            "caption": "ESRI key",
+            "type": "secure"
         }
     }
 }
