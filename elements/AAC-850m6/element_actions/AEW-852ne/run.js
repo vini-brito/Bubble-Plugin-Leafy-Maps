@@ -14,7 +14,7 @@ function(instance, properties, context) {
 
             zoomToBoundsOnClick: true,
             showCoverageOnHover: true,
-            spiderfyOnMaxZoom: false,
+            spiderfyOnMaxZoom: properties.spiderify,
             disableClusteringAtZoom: properties.max_zoom,
 
         };

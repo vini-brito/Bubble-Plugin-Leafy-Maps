@@ -172,6 +172,15 @@
             "optional": true,
             "rank": 19,
             "value": "number"
+        },
+        "ANt": {
+            "caption": "Spiderify",
+            "default_val": false,
+            "doc": "Set to yes if you have multiple markers at the same spot and want the cluster to expand them into a spider-like shape. Easier if you test and see it, too hard to explain without images here. Test by adding a list of markers with clusterization enabled with two markers having the same coordinates, then zoom as close to the ground as possible.",
+            "editor": "DynamicValue",
+            "name": "spiderify",
+            "rank": 20,
+            "value": "boolean"
         }
     }
 }
