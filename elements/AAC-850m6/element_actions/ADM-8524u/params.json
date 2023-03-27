@@ -25,6 +25,25 @@
             "name": "zoom",
             "rank": 2,
             "value": "number"
+        },
+        "ANu": {
+            "caption": "Duration",
+            "default_val": 2,
+            "doc": "Duration of animated panning, in seconds.",
+            "editor": "DynamicValue",
+            "name": "duration",
+            "optional": false,
+            "rank": 3,
+            "value": "number"
+        },
+        "ANv": {
+            "caption": "Ease linearity",
+            "default_val": 1,
+            "doc": "The curvature factor of panning animation easing. 1.0 means linear animation, and the smaller this number, the more bowed the curve. Default is 0.25.",
+            "editor": "DynamicValue",
+            "name": "easeLinearity",
+            "rank": 4,
+            "value": "number"
         }
     }
 }
